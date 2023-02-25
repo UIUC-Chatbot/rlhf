@@ -1,0 +1,199 @@
+,Question,Chosen,Rejected
+0,What does a two-bit Gray code represent?,"A two-bit Gray code is a binary code used to represent numbers in which adjacent values differ in only one bit. For example, the numbers 0, 1, 2, and 3 can be represented as 00, 01, 11, and 10.",A two-bit Gray code is a code that represents two-bit numbers in a way that only one bit changes between successive numbers.
+1,What does a two-bit Gray code represent?,A two-bit Gray code is a code that represents two-bit numbers in a way that only one bit changes between successive numbers.,
+2,What does a two-bit Gray code represent?,"A two-bit Gray code is a binary code used to represent numbers in which adjacent values differ in only one bit. For example, the numbers 0, 1, 2, and 3 can be represented as 00, 01, 11, and 10.",
+3,What are the two control buttons?,,
+4,What are the two control buttons?,,
+5,What are the two control buttons?,,
+6, What does the uninterrupted counting cycle label mean?,The uninterrupted counting cycle is an infinite loop that continues until the H button is pressed.,The uninterrupted counting cycle label means that the cycle continues until the H button is pressed.
+7, What does the uninterrupted counting cycle label mean?,The uninterrupted counting cycle label means that the cycle continues until the H button is pressed.,
+8, What does the uninterrupted counting cycle label mean?,The uninterrupted counting cycle is an infinite loop that continues until the H button is pressed.,
+9, What are the two input buttons?,,
+10, What are the two input buttons?,,
+11, What are the two input buttons?,,
+12, What is the output behavior?,,
+13, What is the output behavior?,,
+14, What is the output behavior?,,
+15, What does a two-bit Gray code represent?,,A two-bit Gray code is a binary code where each successive value differs in only one bit.
+16, What does a two-bit Gray code represent?,A two-bit Gray code is a binary code where each successive value differs in only one bit.,
+17, What does a two-bit Gray code represent?,,
+18,How does this choice of output allow us to redraw the transition diagram?,,
+19,How does this choice of output allow us to redraw the transition diagram?,,
+20,How does this choice of output allow us to redraw the transition diagram?,,
+21,Why use a two-bit Gray code for the output?,"The two-bit Gray code is used for the output because it allows for the states to be marked with output values Z_1Z_0. Additionally, the transition arcs are labeled in terms of the two input buttons, G and H. This makes it easier to understand the diagram and follow the counting cycle.",
+22,Why use a two-bit Gray code for the output?,,
+23,Why use a two-bit Gray code for the output?,"The two-bit Gray code is used for the output because it allows for the states to be marked with output values Z_1Z_0. Additionally, the transition arcs are labeled in terms of the two input buttons, G and H. This makes it easier to understand the diagram and follow the counting cycle.",
+24, What is the input behavior?,,
+25, What is the input behavior?,,
+26, What is the input behavior?,,
+27,What is the significance of labeling the uninterrupted counting cycle with ?,,
+28,What is the significance of labeling the uninterrupted counting cycle with ?,,
+29,What is the significance of labeling the uninterrupted counting cycle with ?,,
+30, What are the states of an FSM?,"Answer : The states of an FSM represent the different conditions that the system can be in. In this example, there are four counting states and four halted states.",
+31, What are the states of an FSM?,,
+32, What are the states of an FSM?,"Answer : The states of an FSM represent the different conditions that the system can be in. In this example, there are four counting states and four halted states.",
+33, What is the uninterrupted counting cycle labeled with?,,
+34, What is the uninterrupted counting cycle labeled with?,,
+35, What is the uninterrupted counting cycle labeled with?,,
+36,What is the uninterrupted counting cycle labeled with?,,
+37,What is the uninterrupted counting cycle labeled with?,,
+38,What is the uninterrupted counting cycle labeled with?,,
+39, What do the buttons 'halt' and 'go' do?,"""The 'halt' button makes the machine stop and the 'go' button makes it start again.""","""The 'halt' button halts the cycle and the 'go' button restarts it."""
+40, What do the buttons 'halt' and 'go' do?,"""The 'halt' button halts the cycle and the 'go' button restarts it.""","The ""halt"" button H and the ""go"" button G provide input for a two-bit Gray code output."
+41, What do the buttons 'halt' and 'go' do?,"""The 'halt' button makes the machine stop and the 'go' button makes it start again.""","The ""halt"" button H and the ""go"" button G provide input for a two-bit Gray code output."
+42, What are the two control buttons?,,
+43, What are the two control buttons?,,
+44, What are the two control buttons?,,
+45, What is the purpose of an FSM?,The purpose of an FSM is to model the behavior of a system.,The purpose of an FSM is to design a counter that can be stopped and started.
+46, What is the purpose of an FSM?,The purpose of an FSM is to design a counter that can be stopped and started.,"The purpose of an FSM is to model the behaviour of a system. In this case, the FSM models the behaviour of a two-bit Gray code counter."
+47, What is the purpose of an FSM?,The purpose of an FSM is to model the behavior of a system.,"The purpose of an FSM is to model the behaviour of a system. In this case, the FSM models the behaviour of a two-bit Gray code counter."
+48, What are the four counting states?,,
+49, What are the four counting states?,,
+50, What are the four counting states?,,
+51, What are the benefits of using an FSM?,"3. FSMs are versatile and can be used to model a wide variety of systems. For example, FSMs can be used to model digital circuits, communication protocols, and computer programs.","FSMs provide a simple, abstract way to model sequential circuits."
+52, What are the benefits of using an FSM?,"FSMs provide a simple, abstract way to model sequential circuits.",
+53, What are the benefits of using an FSM?,"3. FSMs are versatile and can be used to model a wide variety of systems. For example, FSMs can be used to model digital circuits, communication protocols, and computer programs.",
+54, What are the two states in the first column of the table?,,
+55, What are the two states in the first column of the table?,,
+56, What are the two states in the first column of the table?,,
+57, What is the purpose of the ``halt'' button?,"The ``halt'' button is used to stop the counter. If the counter is halted, the ``halt'' button has no additional effect. The table implies that if the user presses the ``halt'' button, the counter will retain its current value until the user presses the ``go'' button.",To stop and start the counter.
+58, What is the purpose of the ``halt'' button?,To stop and start the counter.,"""The halt button is used to stop the counter."""
+59, What is the purpose of the ``halt'' button?,"The ``halt'' button is used to stop the counter. If the counter is halted, the ``halt'' button has no additional effect. The table implies that if the user presses the ``halt'' button, the counter will retain its current value until the user presses the ``go'' button.","""The halt button is used to stop the counter."""
+60, What are the inputs and outputs of an FSM?,,
+61, What are the inputs and outputs of an FSM?,,
+62, What are the inputs and outputs of an FSM?,,
+63, How does an FSM work?,"A finite state machine (FSM) is a mathematical model of computation used to design both computer programs and sequential logic circuits. It is conceived as an abstract machine that can be in one of a finite number of user-specified states. An FSM is defined by a list of its states, its initial state, and the conditions for each transition.'",use all capital letters.
+64, How does an FSM work?,use all capital letters.,"I'm not sure, but I think it has something to do with the state of the machine."
+65, How does an FSM work?,"A finite state machine (FSM) is a mathematical model of computation used to design both computer programs and sequential logic circuits. It is conceived as an abstract machine that can be in one of a finite number of user-specified states. An FSM is defined by a list of its states, its initial state, and the conditions for each transition.'","I'm not sure, but I think it has something to do with the state of the machine."
+66, How many states are in the second version of the table?,,
+67, How many states are in the second version of the table?,,
+68, How many states are in the second version of the table?,,
+69, What is the difference between a next-state table and a transition diagram?,"The primary difference between a next-state table and a transition diagram is that a next-state table lists the states, while each of the other columns lists states to which the FSM transitions after a clock cycle for a particular input combination. A transition diagram, on the other hand, provides exactly the same information in graphical form with circles representing states (as labeled) and arcs representing transitions from one state to another based on an input combination (which is used to label the arc).","A next-state table lists the states, while each of the other columns lists states to which the FSM transitions after a clock cycle for a particular input combination. A transition diagram provides exactly the same information in graphical form, with circles representing states (as labeled) and arcs representing transitions from one state to another based on an input combination (which is used to label the arc)."
+70, What is the difference between a next-state table and a transition diagram?,"A next-state table lists the states, while each of the other columns lists states to which the FSM transitions after a clock cycle for a particular input combination. A transition diagram provides exactly the same information in graphical form, with circles representing states (as labeled) and arcs representing transitions from one state to another based on an input combination (which is used to label the arc).",arc).
+71, What is the difference between a next-state table and a transition diagram?,"The primary difference between a next-state table and a transition diagram is that a next-state table lists the states, while each of the other columns lists states to which the FSM transitions after a clock cycle for a particular input combination. A transition diagram, on the other hand, provides exactly the same information in graphical form with circles representing states (as labeled) and arcs representing transitions from one state to another based on an input combination (which is used to label the arc).",arc).
+72, What is the difference between 'counting' and 'halted' states?,"The 'counting' state represents uninterrupted counting, in which the counter cycles through these states indefinitely. A user can stop the counter in any state by pressing the ``halt'' button, causing the counter to retain its current value until the user presses the ``go'' button. The 'halted' state represents when a user has pressed the ``halt'' button, and the counter is not counting.","In the 'counting' state, the counter cycles through four states indefinitely, while in the 'halted' state, the counter retains its current value."
+73, What is the difference between 'counting' and 'halted' states?,"In the 'counting' state, the counter cycles through four states indefinitely, while in the 'halted' state, the counter retains its current value.",
+74, What is the difference between 'counting' and 'halted' states?,"The 'counting' state represents uninterrupted counting, in which the counter cycles through these states indefinitely. A user can stop the counter in any state by pressing the ``halt'' button, causing the counter to retain its current value until the user presses the ``go'' button. The 'halted' state represents when a user has pressed the ``halt'' button, and the counter is not counting.",
+75, What does pressing the 'halt' button do when the counter is in a 'halted' state?,Pressing the 'halt' button when the counter is in a 'halted' state has no effect.,Pressing the 'halt' button has no effect when the counter is in a 'halted' state.
+76, What does pressing the 'halt' button do when the counter is in a 'halted' state?,Pressing the 'halt' button has no effect when the counter is in a 'halted' state.,"is counting, the ``go'' button has no additional effect."""
+77, What does pressing the 'halt' button do when the counter is in a 'halted' state?,Pressing the 'halt' button when the counter is in a 'halted' state has no effect.,"is counting, the ``go'' button has no additional effect."""
+78, What are some design choices that were made in this context?,,
+79, What are some design choices that were made in this context?,,
+80, What are some design choices that were made in this context?,,
+81, How can the FSM ever get into the unexpected states?,The initial state of the three flip-flops in our implementation is unknown.,The initial state of the three flip-flops in our implementation is unknown.
+82, How can the FSM ever get into the unexpected states?,The initial state of the three flip-flops in our implementation is unknown.,
+83, How can the FSM ever get into the unexpected states?,The initial state of the three flip-flops in our implementation is unknown.,
+84, What is the initial state of the three flip-flops in our implementation?,,
+85, What is the initial state of the three flip-flops in our implementation?,,
+86, What is the initial state of the three flip-flops in our implementation?,,
+87, What happens in the next cycle?,,
+88, What happens in the next cycle?,,
+89, What happens in the next cycle?,,
+90, Why does the light sometimes glow cyan or red briefly before turning white?,,
+91, Why does the light sometimes glow cyan or red briefly before turning white?,,
+92, Why does the light sometimes glow cyan or red briefly before turning white?,,
+93, What is the purpose of an abstract model?,The purpose of an abstract model is to provide a simplified representation of a system. Abstract models are often used to design and analyze complex systems.,The purpose of an abstract model is to provide a simplified representation of a system.
+94, What is the purpose of an abstract model?,The purpose of an abstract model is to provide a simplified representation of a system.,
+95, What is the purpose of an abstract model?,The purpose of an abstract model is to provide a simplified representation of a system. Abstract models are often used to design and analyze complex systems.,
+96, How can we make use of the internal reset lines on these latches to force each flip-flop into the 0 state?,,We can use the internal reset lines on the latches to force each flip-flop into the 0 state by adding an additional input.
+97, How can we make use of the internal reset lines on these latches to force each flip-flop into the 0 state?,We can use the internal reset lines on the latches to force each flip-flop into the 0 state by adding an additional input.,
+98, How can we make use of the internal reset lines on these latches to force each flip-flop into the 0 state?,,
+99, How does the FSM move out of the WHITE state?,,
+100, How does the FSM move out of the WHITE state?,,
+101, How does the FSM move out of the WHITE state?,,
+102, What does the 'x' mean in the K-map?,"The 'x' in the K-map indicates a ""don't care"" condition. This means that the output will be the same regardless of whether the input is a 0 or a 1.",The 'x' means that the bit doesn't matter and can be a 0 or 1.
+103, What does the 'x' mean in the K-map?,The 'x' means that the bit doesn't matter and can be a 0 or 1.,"""The 'x' in the K-map means 'don't care.'"""
+104, What does the 'x' mean in the K-map?,"The 'x' in the K-map indicates a ""don't care"" condition. This means that the output will be the same regardless of whether the input is a 0 or a 1.","""The 'x' in the K-map means 'don't care.'"""
+105, How many states are in the loop?,,
+106, How many states are in the loop?,,
+107, How many states are in the loop?,,
+108, Why does the system need at least three flip-flops?,,
+109, Why does the system need at least three flip-flops?,,
+110, Why does the system need at least three flip-flops?,,
+111, What is the color mapping for a three-bit RGB encoding system?,111& white,The color mapping for a three-bit RGB encoding system is that the colors we need to produce as outputs are all unique bit patterns.
+112, What is the color mapping for a three-bit RGB encoding system?,The color mapping for a three-bit RGB encoding system is that the colors we need to produce as outputs are all unique bit patterns.,
+113, What is the color mapping for a three-bit RGB encoding system?,111& white,
+114, What is the color mapping for a three-bit red-green-blue encoding system?,,
+115, What is the color mapping for a three-bit red-green-blue encoding system?,,"RGB color mapping is 000=black, 001=blue, 010=green, 011=cyan, 100=red, 101=violet, 110=yellow, 111=white."
+116, What is the color mapping for a three-bit red-green-blue encoding system?,,"RGB color mapping is 000=black, 001=blue, 010=green, 011=cyan, 100=red, 101=violet, 110=yellow, 111=white."
+117, How many states are in the loop for the fully-specified transition diagram?,,
+118, How many states are in the loop for the fully-specified transition diagram?,,
+119, How many states are in the loop for the fully-specified transition diagram?,,
+120, What is the desired pattern for the light?,,
+121, What is the desired pattern for the light?,,
+122, What is the desired pattern for the light?,,
+123, How many flip-flops are needed to create a counter that drives a light through a sequence of colors?,,
+124, How many flip-flops are needed to create a counter that drives a light through a sequence of colors?,,
+125, How many flip-flops are needed to create a counter that drives a light through a sequence of colors?,,
+126, How many flip-flops are needed to create a counter to drive the light through a sequence of colors?,,
+127, How many flip-flops are needed to create a counter to drive the light through a sequence of colors?,,
+128, How many flip-flops are needed to create a counter to drive the light through a sequence of colors?,,
+129, What is the transition diagram for a fully-specified color sequencer?,The transition diagram for a fully-specified color sequencer is a loop of states that are marked with the internal state value S_2S_1S_0 and the output RGB.,
+130, What is the transition diagram for a fully-specified color sequencer?,,
+131, What is the transition diagram for a fully-specified color sequencer?,The transition diagram for a fully-specified color sequencer is a loop of states that are marked with the internal state value S_2S_1S_0 and the output RGB.,
+132, How many flip-flops are needed to create a counter to drive a light through a sequence of colors?,,
+133, How many flip-flops are needed to create a counter to drive a light through a sequence of colors?,,
+134, How many flip-flops are needed to create a counter to drive a light through a sequence of colors?,,
+135, Why is it necessary to use at least three flip-flops?,,
+136, Why is it necessary to use at least three flip-flops?,,
+137, Why is it necessary to use at least three flip-flops?,,
+138, How does the color mapping work for a three-bit RGB system?,,
+139, How does the color mapping work for a three-bit RGB system?,,
+140, How does the color mapping work for a three-bit RGB system?,,
+141, How many flip-flops will we need?,,
+142, How many flip-flops will we need?,,
+143, How many flip-flops will we need?,,
+144, What is the fully-specified transition diagram for our color sequencer?,,
+145, What is the fully-specified transition diagram for our color sequencer?,,
+146, What is the fully-specified transition diagram for our color sequencer?,,
+147," Given that we need three flip-flops, can the counter's internal state directly be used as our output values?",Yes,"Yes, the counter's internal state can be used as our output values because the colors we need to produce are all unique bit patterns."
+148," Given that we need three flip-flops, can the counter's internal state directly be used as our output values?","Yes, the counter's internal state can be used as our output values because the colors we need to produce are all unique bit patterns.","No, we cannot use the counter's internal state directly as our output values."
+149," Given that we need three flip-flops, can the counter's internal state directly be used as our output values?",Yes,"No, we cannot use the counter's internal state directly as our output values."
+150, What is the importance of ordering the vertical lines carrying the current state values and their inverses back to the next state logic inputs?,Ordering the vertical lines carrying the current state values and their inverses back to the next state logic inputs makes it easy for someone to read and check the correctness of the logic.,
+151, What is the importance of ordering the vertical lines carrying the current state values and their inverses back to the next state logic inputs?,,
+152, What is the importance of ordering the vertical lines carrying the current state values and their inverses back to the next state logic inputs?,Ordering the vertical lines carrying the current state values and their inverses back to the next state logic inputs makes it easy for someone to read and check the correctness of the logic.,
+153, What is the purpose of using a Gray code basis for the state sequence?,The Gray code basis for the state sequence is used to simplify the design complexity by explicitly identifying and making use of common algebraic terms and sub-expressions for different outputs.,The Gray code basis for the state sequence simplifies the design of the next-state logic.
+154, What is the purpose of using a Gray code basis for the state sequence?,The Gray code basis for the state sequence simplifies the design of the next-state logic.,A Gray code basis is used for the state sequence so that only one bit changes at a time. This makes it easy to read and check the correctness of the logic.
+155, What is the purpose of using a Gray code basis for the state sequence?,The Gray code basis for the state sequence is used to simplify the design complexity by explicitly identifying and making use of common algebraic terms and sub-expressions for different outputs.,A Gray code basis is used for the state sequence so that only one bit changes at a time. This makes it easy to read and check the correctness of the logic.
+156,What is the algebraic expression for S_1^+?,,
+157,What is the algebraic expression for S_1^+?,,
+158,What is the algebraic expression for S_1^+?,,
+159,What is the algebraic expression for S_0^+?,,
+160,What is the algebraic expression for S_0^+?,,
+161,What is the algebraic expression for S_0^+?,,
+162, What is the purpose of a Three-Bit Gray Code Counter?,"The purpose of a Three-Bit Gray Code Counter is to count in binary, with one bit changing at a time.","The purpose of a Three-Bit Gray Code Counter is to count from 0 to 7 in binary, with no two adjacent numbers having the same number of 1s."
+163, What is the purpose of a Three-Bit Gray Code Counter?,"The purpose of a Three-Bit Gray Code Counter is to count from 0 to 7 in binary, with no two adjacent numbers having the same number of 1s.",
+164, What is the purpose of a Three-Bit Gray Code Counter?,"The purpose of a Three-Bit Gray Code Counter is to count in binary, with one bit changing at a time.",
+165, How does the counter move from one state to the next?,"With no inputs, the states simply form a loop, with the counter moving from one state to the next each cycle.",The counter moves from one state to the next based on the internal state value S_2S_1S_0 (before ``/'') and the output Z_2Z_1Z_0 (after ``/'').
+166, How does the counter move from one state to the next?,The counter moves from one state to the next based on the internal state value S_2S_1S_0 (before ``/'') and the output Z_2Z_1Z_0 (after ``/'').,
+167, How does the counter move from one state to the next?,"With no inputs, the states simply form a loop, with the counter moving from one state to the next each cycle.",
+168,What is the algebraic expression for S_2^+?,,
+169,What is the algebraic expression for S_2^+?,,
+170,What is the algebraic expression for S_2^+?,,
+171, Why is it important to have a clear understanding of the abstract model when designing a FSM?,"A clear understanding of the abstract model is important when designing a FSM because it allows the designer to make decisions about how to simplify the implementation. For example, if the abstract model includes multiple inputs that control the behavior of the FSM, the designer can choose to represent the internal state of the FSM in a way that makes it easier to understand and implement.",A clear understanding of the abstract model is necessary in order to simplify the implementation.
+172, Why is it important to have a clear understanding of the abstract model when designing a FSM?,A clear understanding of the abstract model is necessary in order to simplify the implementation.,"Because if you don't have a clear understanding of the abstract model, you won't be able to design a FSM that is easy for humans to understand."
+173, Why is it important to have a clear understanding of the abstract model when designing a FSM?,"A clear understanding of the abstract model is important when designing a FSM because it allows the designer to make decisions about how to simplify the implementation. For example, if the abstract model includes multiple inputs that control the behavior of the FSM, the designer can choose to represent the internal state of the FSM in a way that makes it easier to understand and implement.","Because if you don't have a clear understanding of the abstract model, you won't be able to design a FSM that is easy for humans to understand."
+174, What is a finite state machine?,"A finite state machine is a model of computation that can be used to design digital logic circuits. It consists of a set of states, a set of inputs, and a set of outputs. The machine transitions from one state to another in response to input signals. The output signals are determined by the state that the machine is in.",A finite state machine is a digital logic circuit that can be in one of a finite number of states. The state of the machine is determined by the values of its inputs and outputs.
+175, What is a finite state machine?,A finite state machine is a digital logic circuit that can be in one of a finite number of states. The state of the machine is determined by the values of its inputs and outputs.,
+176, What is a finite state machine?,"A finite state machine is a model of computation that can be used to design digital logic circuits. It consists of a set of states, a set of inputs, and a set of outputs. The machine transitions from one state to another in response to input signals. The output signals are determined by the state that the machine is in.",
+177,What is the general form of selection logic called a multiplexer?,,
+178,What is the general form of selection logic called a multiplexer?,,
+179,What is the general form of selection logic called a multiplexer?,,
+180, How does the choice of representation for the FSM's internal state affect the complexity of the implementation?,"The choice of representation for the FSM's internal state can affect the complexity of the implementation in a number of ways. For example, if the internal state is represented as a set of Boolean variables, then the number of logic gates required to implement the FSM will be proportional to the number of variables. If the internal state is represented as a set of integers, then the number of logic gates required to implement the FSM will be proportional to the number of bits in each integer. In addition, different representations may require different numbers of flip-flops to store the state information.",
+181, How does the choice of representation for the FSM's internal state affect the complexity of the implementation?,,
+182, How does the choice of representation for the FSM's internal state affect the complexity of the implementation?,"The choice of representation for the FSM's internal state can affect the complexity of the implementation in a number of ways. For example, if the internal state is represented as a set of Boolean variables, then the number of logic gates required to implement the FSM will be proportional to the number of variables. If the internal state is represented as a set of integers, then the number of logic gates required to implement the FSM will be proportional to the number of bits in each integer. In addition, different representations may require different numbers of flip-flops to store the state information.",
+183,What is an example of a counter with a number of states that is not a power of two?,,
+184,What is an example of a counter with a number of states that is not a power of two?,,
+185,What is an example of a counter with a number of states that is not a power of two?,,
+186, How can semantic knowledge from the abstract model be used to simplify the implementation?,We can use semantic knowledge from the abstract model to simplify the implementation by using it to choose a suitable representation for the FSM's internal state. A more intuitive and easier-to-understand representation will typically make the best design in terms of logic complexity.,"By understanding the meaning of the states and transitions in the abstract model, the implementation can be made more efficient."
+187, How can semantic knowledge from the abstract model be used to simplify the implementation?,"By understanding the meaning of the states and transitions in the abstract model, the implementation can be made more efficient.",
+188, How can semantic knowledge from the abstract model be used to simplify the implementation?,We can use semantic knowledge from the abstract model to simplify the implementation by using it to choose a suitable representation for the FSM's internal state. A more intuitive and easier-to-understand representation will typically make the best design in terms of logic complexity.,
+189, What is an example of a design that is more intuitive and easier for humans to understand?,,"A design that is more intuitive and easier for humans to understand is one that uses a representation for the FSM's internal state that is easy to understand. For example, a design that uses a binary representation for the internal state is easier to understand than a design that uses a hexadecimal representation."
+190, What is an example of a design that is more intuitive and easier for humans to understand?,"A design that is more intuitive and easier for humans to understand is one that uses a representation for the FSM's internal state that is easy to understand. For example, a design that uses a binary representation for the internal state is easier to understand than a design that uses a hexadecimal representation.",
+191, What is an example of a design that is more intuitive and easier for humans to understand?,,
+192,What is the design process for a digital FSM?,"Finally, the design is implemented using flip-flops and logic gates.",The design process for a digital FSM is a process of translating a concrete and complete state transition diagram into an implementation based on flip-flops and logic gates.
+193,What is the design process for a digital FSM?,The design process for a digital FSM is a process of translating a concrete and complete state transition diagram into an implementation based on flip-flops and logic gates.,
+194,What is the design process for a digital FSM?,"Finally, the design is implemented using flip-flops and logic gates.",
+195, What are the basic steps of designing a finite state machine?,"The basic steps of designing a finite state machine are developing an abstract model, implementing functions for the next-state variables and output signals, and translating a concrete and complete state transition diagram into an implementation based on flip-flops and logic gates.","The basic steps of designing a finite state machine are to first develop an abstract model, then create functions for the next-state variables and output signals, and finally to implement the design using flip-flops and logic gates."
+196, What are the basic steps of designing a finite state machine?,"The basic steps of designing a finite state machine are to first develop an abstract model, then create functions for the next-state variables and output signals, and finally to implement the design using flip-flops and logic gates.",4) Choose a representation for the FSM's internal state \n
+197, What are the basic steps of designing a finite state machine?,"The basic steps of designing a finite state machine are developing an abstract model, implementing functions for the next-state variables and output signals, and translating a concrete and complete state transition diagram into an implementation based on flip-flops and logic gates.",4) Choose a representation for the FSM's internal state \n

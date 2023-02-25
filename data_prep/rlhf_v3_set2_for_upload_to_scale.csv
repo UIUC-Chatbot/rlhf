@@ -1,0 +1,1697 @@
+attachments_json,metadata
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can a digital system use a strategy similar to the one developed for error detection to perform error correction?\n#### Option 1\n-------\nA digital system can use a representation with a Hamming distance of d to detect up to d-1 bit errors. To perform error correction, the system can triple the number of bits needed in the representation and use a majority vote between the three copies to correct a single bit error. However, this strategy will not work if more than one bit error has occurred.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nError correction can be achieved by using a strategy similar to the one developed for error detection. This strategy involves systematically transforming any representation into a representation that allows detection of a single bit error. To do this, the system must be designed to recognize and identify errors automatically, assuming that each bit may be in error independently with some low probability. When an error is detected, the system can then use the same pattern of bits to determine which bit was in error and correct it accordingly.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nHamming codes can be used to perform single error correction and double error detection. This is done by adding an extra parity bit that covers the entire Hamming code, which increases the Hamming distance to 4. This allows for single bit error correction, while also detecting any two bit errors.""
+ }
+]","{
+ ""id"": 1
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can a code with Hamming distance d allow up to d-1 errors to be corrected?\n#### Option 1\n-------\nA code with Hamming distance d can correct up to d-1 bit errors by using a majority vote. Each bit of the representation is stored three times, and if a single bit error occurs, the majority vote will determine the correct value.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA code with Hamming distance d allows up to (d-1) errors to be corrected by manipulating the inequality to express the number of errors k that can be corrected in terms of the Hamming distance d. This ensures that any bit pattern encountered as a result of up to k bit errors will always fall within the original code word's neighborhood and thus can be uniquely identified by it.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nHamming codes allow for single bit error correction by adding check bits to a code word. The Hamming distance is the number of bits that must be changed to transform one code word into another, and it must be at least 3 for single bit error correction. By adding additional parity bits, the Hamming distance can be increased to d+1 while still allowing up to d-1 errors to be corrected.""
+ }
+]","{
+ ""id"": 2
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of Hamming codes?\n#### Option 1\n-------\nHamming codes are used to detect and correct single bit errors in data transmission. They work by adding additional check bits to the data which can be used to detect whether an error has occurred, and if so, which bit is incorrect.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nHamming codes are used to detect and correct bit errors in digital systems. They use a representation with a specific Hamming distance which allows them to detect up to d-1 errors, and with some overhead, can also correct up to k bit errors.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nHamming codes are used to detect and correct single bit errors in a digital system. They allow up to (d-1) errors to be corrected, where d is the Hamming distance of the code.""
+ }
+]","{
+ ""id"": 3
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How are parity checks defined in a Hamming code?\n#### Option 1\n-------\nIn a Hamming code, parity checks are defined by considering the parity of a group of bits (x_4, x_5, x_6 and x_7 for c_4; x_2, x_3, x_6 and x _7 for c2; and so on). If the parity is even then the check bit is assigned 0; if it is odd then the check bit is assigned 1.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nIn a Hamming code, parity checks are defined by the minimum number of bit changes (Hamming distance) required to turn one code word into another. This is used to detect errors in a stored value, and in some cases can even be used to correct up to d-1 errors.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nParity checks in a Hamming code are defined by adding an extra bit called the parity bit to the representation and selecting its value so that the count of 1s is either odd (odd parity) or even (even parity) for all values represented.""
+ }
+]","{
+ ""id"": 4
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of Single Error Correction, Double Error Detection (SEC-DED) codes?\n#### Option 1\n-------\nSEC-DED codes enable a system to detect and correct single bit errors while also detecting any two bit errors.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nSEC-DED codes are used to detect and correct single bit errors in a code word, allowing for more reliable data transmission.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nSEC-DED codes are used to detect and correct up to one bit error in a stored value. These codes have a Hamming distance of at least d, which means that any two code words must differ by at least d bits. This allows the system to detect up to d-1 errors in the stored value. Additionally, if only one bit error occurs, then the majority vote of the three copies can be used to determine the original value and thus correct it.""
+ }
+]","{
+ ""id"": 5
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can a representation with an odd Hamming distance be extended to have a Hamming distance one greater than the original representation?\n#### Option 1\n-------\nBy adding an extra bit to the representation, the Hamming distance can be increased by one. This extra bit is known as a parity bit and is used to detect errors in the code word.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nTo extend a representation with an odd Hamming distance to one greater than the original, we can add an extra bit, known as a parity bit. We can then select the parity bit's value such that it ensures that the count of 1s is either odd (odd parity) or even (even parity). This will increase the Hamming distance by one.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nAdding a parity bit covering the entire Hamming code can extend a representation with an odd Hamming distance to have a Hamming distance one greater than the original representation.""
+ }
+]","{
+ ""id"": 6
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the role of different types of instructions in allowing a programmer to express a computation?\n#### Option 1\n-------\nInstructions allow a programmer to specify the operations that should be performed on data types such as integers and text. Data movement instructions, control instructions, arithmetic and logic operations all form the set of instructions available in an ISA. These instructions enable a programmer to express a computation by providing ways to manipulate and process data.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nC instructions allow a programmer to express a computation by providing the necessary syntax, operators, data types and functions to create programs that can be compiled into machine language.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nInstructions allow a programmer to express a computation by providing the steps and operations needed for the computer to carry out the desired task. For example, an instruction may tell the computer to move data from one location in memory to another or add two numbers together. By combining different instructions, a programmer can create complex programs that can perform many tasks.""
+ }
+]","{
+ ""id"": 7
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the process of transforming assembly code into machine code?\n#### Option 1\n-------\nThe process of transforming assembly code into machine code involves encoding instructions according to the Instruction Set Architecture (ISA) of the processor, which includes assigning operation codes (opcodes) and fields to each instruction.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe process of transforming assembly code into machine code involves the use of an assembler, which takes the assembly language instructions as input and produces the corresponding machine code. The assembler uses a symbol table to keep track of labels and variables used in the program. It also performs a two-pass process to resolve labels and generate machine code.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nAn assembler is a tool that converts assembly code into machine code, which can be read by a processor and executed.""
+ }
+]","{
+ ""id"": 8
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the structured approach used by humans to perform addition?\n#### Option 1\n-------\nHumans perform addition by starting with the least significant bit and moving to the left, adding a carry from the lower bits into higher bits when necessary.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nHumans typically use the base 10 system to perform addition, which involves breaking down numbers into individual digits and adding them together. This is a structured approach that allows us to easily keep track of the results.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe structured approach used by humans to perform addition is to use bit-sliced logic, which involves designing a logic block to handle one bit of a multi-bit operation, then replicating the bit slice logic to construct a design for the entire operation.""
+ }
+]","{
+ ""id"": 9
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is a ripple-carry adder and what implications does it have?\n#### Option 1\n-------\nA ripple-carry adder is a logic design that uses an abstraction technique to break down the operations of adding two binary numbers into repeated operations on individual bits. This technique enables the design of adders of any size, but the resulting designs are slightly less efficient than ones optimized for a specific purpose.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA ripple-carry adder is an N-bit adder that is formed by integrating N copies of a full adder, also known as a bit slice. The carry information moves from the low bits to the high bits slowly, like a ripple on water, hence the name. This propagation delay gives rise to an overall increase in the total delay of the comparator on a per-bit-slice basis.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA ripple-carry adder is a type of bit-sliced logic design which replicates the same logic block to handle multiple bits of a multi-bit operation. This results in faster computation time, but requires more area for the design.""
+ }
+]","{
+ ""id"": 10
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the abstraction technique used to build combinational logic for operations on groups of bits?\n#### Option 1\n-------\nCombinational logic is an abstraction technique used to build operations on groups of bits.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe abstraction technique used to build combinational logic for operations on groups of bits is called \""bit-slicing\"".""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe abstraction technique used to build combinational logic for operations on groups of bits is bit-slicing.""
+ }
+]","{
+ ""id"": 11
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How does the bit-sliced adder circuit mimic a human's approach to adding two binary numbers?\n#### Option 1\n-------\nThe bit-sliced adder circuit mimics a human's approach to adding two binary numbers by breaking the operation down into repeated operations on individual bits, starting with the least significant bit and carrying from lower bits into higher bits as necessary.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe bit-sliced adder circuit mimics the human approach to adding two binary numbers by breaking down the problem into simpler parts. Each part, or \""bit slice,\"" adds three input bits and produces two output bits, just like a person would do when adding two binary numbers. The carry information moves from the low bits to the high bits slowly, which is analogous to how a person would add each digit of a number one at a time.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe bit-sliced adder circuit replicates the way a human would add two binary numbers by adding one bit of the numbers at a time, starting from the least significant bit. Each single-bit addition is then used to inform the next bit addition until all bits are added together, resulting in an overall sum.""
+ }
+]","{
+ ""id"": 12
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the difference between a full adder and a half adder?\n#### Option 1\n-------\nA full adder adds three input bits and produces two output bits, while a half adder adds only two input bits and produces two output bits.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA full adder is a logic circuit that adds three bits together, consisting of two inputs and the carry from the previous column, to produce a sum bit and a carry out bit for the next column. A half adder is similar, but only adds two input bits together to produce a sum bit and a carry out bit.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA full adder is a logic circuit that can perform the addition of three one-bit binary numbers, while a half adder can only perform the addition of two one-bit binary numbers. A full adder also has an additional input for a carry bit from the previous addition operation. This makes it more useful for calculations involving larger numbers than a half adder.""
+ }
+]","{
+ ""id"": 13
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is a ripple carry adder?\n#### Option 1\n-------\nA ripple carry adder is a logic design that uses the same structured approach used by humans to perform addition, in which operations are repeated on individual bits and a carry may be passed from lower bits into higher bits.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA ripple carry adder is a type of adder made up of multiple full adders that adds three input bits and produces two output bits. The carry information moves from the low bits to the high bits slowly, like a ripple on the surface of a pond, thus giving rise to its name.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA ripple carry adder is a type of hardware logic circuit that uses the \""ripple\"" effect to propagate a carry bit between each bit in an addition operation. It is typically used when adding two or more numbers with more than one digit.""
+ }
+]","{
+ ""id"": 14
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the symbol used to represent an adder in logic diagrams?\n#### Option 1\n-------\nThe symbol used to represent an adder in logic diagrams is a full adder.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe symbol used to represent an adder in logic diagrams is a shape with inputs and outputs labeled, with the text \""adder\"" in the middle for clarity.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe symbol used to represent an adder in logic diagrams is a bit-sliced adder.""
+ }
+]","{
+ ""id"": 15
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the most common word size used in desktop and laptop machines?\n#### Option 1\n-------\nMost desktop and laptop machines now have a word size of 64 bits.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe most common word size used in desktop and laptop machines is 32 bits.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe most common word size used in desktop and laptop machines is typically 32 bits, although some machines may use 64-bit words.""
+ }
+]","{
+ ""id"": 16
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the tradeoffs typically made to develop bit-sliced designs?\n#### Option 1\n-------\nThe tradeoffs typically made to develop bit-sliced designs are between area needed for the design and the speed of the design. Bit-sliced designs require multiple copies of logic blocks, resulting in more area being used, but they are faster than serial designs which use fewer logic blocks but take longer to complete operations.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe tradeoffs typically made in developing bit-sliced designs are between the simplicity of the approach and its resulting efficiency. While the bit-sliced design is simpler to implement, it is less efficient than designs that are optimized for specific purposes.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe tradeoffs typically made to develop bit-sliced designs are between space and time, where the design can be optimized for any number of bits and then applied multiple times in either space (bit-sliced approach) or time (serialization approach). Additionally, engineers often design hardware elements that are general enough to support this kind of extension in software.""
+ }
+]","{
+ ""id"": 17
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can one develop variants between the extremes of the bit-sliced approach and optimization of functions specific to an N-bit design?\n#### Option 1\n-------\nOne way to develop a design between the extremes of the bit-sliced approach and optimization of functions specific to an N-bit design is serialization. This involves using flip-flops to store bits passed from one bit slice to the next, then presenting these stored bits back to the same bit slice in the next cycle, so that only one copy of the bit slice logic is needed. This reduces area but may be slower than a bit-sliced approach.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nBy using the bit-sliced approach, it is possible to develop a variety of variations between the extremes of optimizing functions specific to an N-bit design and mimicking the structured approach used by humans. This can be achieved by designing a circuit that adds a single bit and passes any necessary information into another copy of itself. By using copies of this bit-sliced adder circuit, one can create adders or comparators of any size with different levels of optimization and efficiency.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nVeitch proposed that the best expression of a Boolean function depends on the underlying technology, cost, power and performance metrics. To develop variants between the extremes of bit-sliced approach and optimization of functions specific to an N-bit design, we must consider these metrics and find a balance between them to determine which expression is most optimal.""
+ }
+]","{
+ ""id"": 18
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is a register and how is it used in digital systems?\n#### Option 1\n-------\nA register is a storage element composed of one or more flip-flops operating on a common clock. It is used to store groups of bits in digital systems, with logic to control the bits stored. It can also be used for data manipulation, as seen in the example of a shift register.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA register is a storage element in a digital system that holds data for short periods of time. It is used to store intermediate results during the processing of instructions, allowing them to be accessed quickly and efficiently.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA register is a memory element used to store data in digital systems. Registers can hold multiple bits of information and are typically used to store the results of computations, instruction codes, and other data that needs to be accessed quickly.""
+ }
+]","{
+ ""id"": 19
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is a shift register and how is it used in digital systems?\n#### Option 1\n-------\nA shift register is a series of D flip-flops connected in a chain, with the output of each connected to the input of the next. It is used to store and manipulate data in digital systems, allowing for a single bit of data to be input per cycle and delivered four cycles later as an output.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA shift register is a digital circuit that stores a sequence of bits, which can be shifted in either direction (left or right). It is used in digital systems for data storage and manipulation, such as serial input and output, arithmetic operations like division by two, or to implement specialized logic functions.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA shift register is a type of memory device used in digital systems to store multiple bits of data. It consists of a series of flip-flops connected together, with the output of one flip-flop connected to the input of the next. Data is loaded into the shift register by setting each bit in its desired state, then shifted out bit by bit until all bits have been processed. Shift registers are often used for data storage and manipulation, such as serial-to-parallel conversion, parallel loading, and as counters.""
+ }
+]","{
+ ""id"": 20
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is clock gating?\n#### Option 1\n-------\nClock gating is a method of controlling the clock signals of a register to allow a flip-flop to retain its value. It uses inputs to control the clock so that when LOAD is low, the clock input is held high and the flip-flop stores its current value.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nClock gating is a strategy used to control the visibility of a clock signal to flip-flops (or latches) by using logic. It can reduce power consumption by hiding the clock signal from flip-flops and it is often used in modern designs. CAD tools are often used to insert logic for clock gating automatically.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nClock gating is a technique used in high-speed logic designs to control when latches copy their inputs into the stored bit. A clock signal is used to enable or disable the transfer of data from one set of latches to the next, allowing for precise timing of signals in order to ensure correct operation. The clock signal is typically a square wave that switches between 0 and 1 with a regular period.""
+ }
+]","{
+ ""id"": 21
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is a parallel load?\n#### Option 1\n-------\nA parallel load is a method of loading multiple bits into a register in a single cycle, using one input line per bit.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nParallel load is a method of loading data into a shift register simultaneously, using multiple inputs. This allows the register to accept and store a value in one cycle, rather than requiring N cycles for an N-bit register.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA parallel load is a method of loading data into a shift register in which multiple bits are loaded simultaneously, rather than serially.""
+ }
+]","{
+ ""id"": 22
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How would you add support for parallel load to the shift register shown?\n#### Option 1\n-------\nTo add support for parallel load to the shift register shown, additional inputs are needed. A 4-to-1 multiplexer (mux) can be used to control shifting, allowing for a bidirectional shift register with parallel load capability and the ability to retain its value indefinitely. The number of additional inputs required is four, one for each bit in the register.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nAdd a mux and feedback loop to each flip-flop, and add an IN line for each bit. Connect the output of the mux to the flip-flop's D input. When LOAD is low, the mux selects the feedback line, and when LOAD is high, it selects its IN input.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nTo add support for parallel load to the shift register shown, a multiplexer can be added before the input of the register. The multiplexer will take two inputs, one from SI and another from a parallel load input. The output of the multiplexer will be connected to SI and is controlled by an enable signal. When enabled, data from the parallel load input will be passed into SI and when disabled, data from SI will pass through it normally.""
+ }
+]","{
+ ""id"": 23
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How many additional inputs would be necessary to construct a 4-bit bidirectional shift register?\n#### Option 1\n-------\nA 4-bit bidirectional shift register would require two additional inputs: a serial input and a serial output.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nTo construct a 4-bit bidirectional shift register, two additional inputs would be necessary: one for the serial input (SI) and one for the serial output (SO).""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nTwo additional inputs would be required to construct a 4-bit bidirectional shift register. These inputs would be used to control the direction of the shifting, allowing data to move either left or right.""
+ }
+]","{
+ ""id"": 24
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the properties of Boolean logic?\n#### Option 1\n-------\nBoolean logic is a type of algebra that deals with logical operations and expressions. It is based on the idea of true and false values, which are represented by 1s and 0s, respectively. Boolean logic uses operators such as AND, OR, NOT, XOR and NAND to manipulate these values to form expressions. These expressions can be used to represent any logical statement or decision in a concise way. The properties of Boolean logic include associativity (the order in which operations are performed does not matter), commutativity (the order of the operands does not matter) and distributivity (AND distributes over OR). Additionally, don't care simplification can be used to reduce the number of terms needed for an expression while still preserving its meaning.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nBoolean logic is based on two values: 1 (true) and 0 (false). It has four main functions - AND, OR, NOT and XOR - which operate on two or more operands. AND evaluates to 1 if all of the input values are 1; OR evaluates to 1 if any of the input values is 1; NOT evaluates to the opposite value of the input; and XOR evaluates to 1 if an odd number of input operands are equal to 1. The notation for each function varies across engineering and mathematics, but they can be distinguished by their schematic symbols: flat inputs/round outputs for AND, round inputs/pointed outputs for OR, triangle/circle for NOT and OR with two lines on the input side for XOR.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nBoolean logic has several properties, including duality, complementing each variable, and the ability to use \""don't care\"" values. Duality states that two equations can be related by renaming variables to simplify the form. Complementing each variable involves taking the opposite of a given value (e.g., 0 becomes 1). Lastly, \""don't care\"" values allow for multiple possible functions when designing combinational logic, which simplifies implementation and reduces complexity.""
+ }
+]","{
+ ""id"": 25
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the value of underspecifying a logic function?\n#### Option 1\n-------\nUnderspecifying a logic function can be beneficial because it reduces the complexity of implementation by allowing you to choose from several possible logic functions that produce the desired results. It also doubles the number of functions that can be chosen, often enabling simpler logic needed for implementation.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nUnderspecifying a logic function can help reduce complexity and cost by reducing the number of logic gates needed to implement the function. It can also improve power consumption and performance by allowing for faster operation.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nUnderspecifying a logic function means that some of its inputs are not specified. This can have the effect of simplifying the logic expression, since it eliminates the need to consider all possible combinations of inputs and outputs. Additionally, it can also make a logic circuit more efficient by reducing the number of components needed to implement it.""
+ }
+]","{
+ ""id"": 26
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the principle of duality?\n#### Option 1\n-------\nThe principle of duality states that for any equation, there is a dual form which has the same truth values as the original when 0 is treated as true. This allows for easier design of certain types of logic, such as networks of transistors connecting the output of a CMOS gate to high voltage and ground. Additionally, one can calculate the complement of a Boolean function by calculating its dual form and then complementing each variable.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe principle of duality states that any theorem or identity has the same truth value in its dual form.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe principle of duality states that two different expressions for a logic function can be transformed into each other using DeMorgan's laws. These two forms are known as the Sum-of-Products (SOP) and Product-of-Sum (POS) forms. It is possible to transform an SOP expression into a POS expression by replacing the OR gate with a NAND with inverted inputs, or vice versa.""
+ }
+]","{
+ ""id"": 27
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can the dual form of a Boolean expression be calculated?\n#### Option 1\n-------\nThe dual form of a Boolean expression can be calculated by taking the dual of each variable, renaming them if necessary, and then complementing each variable.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe dual form of a Boolean expression can be calculated by replacing each AND operator with an OR operator and each OR operator with an AND operator.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nTo calculate the dual form of a Boolean expression, replace 0 with 1, replace 1 with 0, replace AND with OR, and replace OR with AND. Variables are not changed. Add parentheses as necessary to ensure that the order of operations does not change.""
+ }
+]","{
+ ""id"": 28
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the benefit of using \""don\\'t care\"" values when designing combinational logic?\n#### Option 1\n-------\nUsing \""don't care\"" values allows for a simpler logic design by doubling the number of possible functions that can be chosen to implement the design, thus allowing for fewer logic gates and a more efficient circuit.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nUsing \""don't care\"" values when designing combinational logic can reduce the number of gates required, improve performance, and reduce power consumption.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nUsing \""don't care\"" values when designing combinational logic can reduce the complexity of the circuit, as it allows for more efficient expression of functions. This can result in a circuit that requires fewer components and less energy consumption, resulting in lower cost and improved performance.""
+ }
+]","{
+ ""id"": 29
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How does the use of \""don\\'t care\"" values double the number of functions that can be chosen to implement a design?\n#### Option 1\n-------\nWhen \""don't care\"" values are used, the number of functions that can be chosen to implement a design is doubled because each input combination can have either a 0 or 1 as an output, which gives two possible functions for each input combination.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nUsing \""don't care\"" values allows for two possible functions to be chosen to implement a design, as it creates two sets of minterms; one with the \""don't care\"" values included and another without them. This doubles the number of possible functions that can be used to express a Boolean function.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nUsing \""don't care\"" values allows for two possible values (0 or 1) to be assigned to each input combination marked as such, doubling the number of functions that can be chosen to implement the design. This often results in simpler logic needed for implementation.""
+ }
+]","{
+ ""id"": 30
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What can go wrong when leaving unspecified details in the context of a digital system?\n#### Option 1\n-------\nLeaving unspecified details in a digital system can lead to unexpected or undesired behavior if the input exceeds what was assumed by the designer. This can cause problems with inputs that produce results that are not intended or expected.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nWhen leaving unspecified details in a digital system, unexpected results can occur. For example, if more than one button is pressed, the ice cream cup may overflow due to the output of two servings instead of one.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nWhen unspecified details are left in the context of a digital system, it can be difficult to determine how the system should behave in those cases. This can lead to unpredictable behavior or incorrect results depending on the application.""
+ }
+]","{
+ ""id"": 31
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the root of the problem when leaving output values specified as \""don\\'t care\""?\n#### Option 1\n-------\nThe root of the problem is that while we don't care about the value of any particular output marked \""x\"" for any particular input combination, we do actually care about the relationship between the outputs.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe root of the problem when leaving output values specified as \""don't care\"" is that they can lead to unexpected behavior if not handled correctly. This can be avoided by using logic to prioritize input signals and enforce assumptions in a conservative way.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe root of the problem when leaving output values specified as \""don't care\"" is that any unspecified details may or may not be important, and thus can lead to unexpected results in a digital system.""
+ }
+]","{
+ ""id"": 32
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of a priority encoder?\n#### Option 1\n-------\nA priority encoder is used to take a multi-bit input, such as the buttons of a vending machine, and convert it into a two-bit signal that indicates which button was pressed. This two-bit signal can then be used to control logic for item release.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA priority encoder is used to arbitrate between devices attached to a processor by imposing a strict order on the devices and signaling the processor about their needs one at a time.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe purpose of a priority encoder is to prioritize user input so that only valid combinations are passed to the original implementation. This can be done by selecting a prioritization scheme or by mapping illegal combinations into the \""no buttons pressed\"" input pattern.""
+ }
+]","{
+ ""id"": 33
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is BIST hardening?\n#### Option 1\n-------\nBIST hardening is a technique used to protect circuits from faults caused by radiation, aging, and other environmental influences. It involves inserting additional logic into the circuit to detect and correct any errors that may occur. This ensures that the circuit remains reliable even in harsh conditions.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nBIST hardening is a process of making digital circuits more robust by using techniques such as redundancy, fault masking and fault tolerance. It involves adding additional logic to the circuit to detect and correct errors that may occur during operation. This additional logic can be used to reduce the effects of faults on system performance and reliability.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nBIST hardening is a technique used to protect hardware from malicious attacks and reduce the risk of unauthorized access. It involves making changes to the design and layout of circuits, such as adding redundant logic or using error-correcting codes, so that the circuit is more resilient to faults.""
+ }
+]","{
+ ""id"": 34
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are DeMorgan's laws?\n#### Option 1\n-------\nDeMorgan's laws state that the inverse of an AND operation is an OR operation with inverted inputs (A+B = !(!A*!B)) and the inverse of an OR operation is an AND operation with inverted inputs (A*B = !(!A+!B)).""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nDeMorgan's laws are two logical equivalences that state that the complement of a conjunction (AND) is equal to the disjunction (OR) of the complements, and vice versa.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nDeMorgan's laws are two logical equivalences which state that the negation of a conjunction is equivalent to the disjunction of the negations, and vice versa. This means that \""not (A AND B)\"" is equivalent to \""(NOT A) OR (NOT B)\"", and \""not (A OR B)\"" is equivalent to \""(NOT A) AND (NOT B)\"".""
+ }
+]","{
+ ""id"": 35
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What techniques are used to evaluate the best way to express a Boolean function?\n#### Option 1\n-------\nVeitch proposed that the best expression for a Boolean function is dependent on the underlying technology, such as cost, power and performance metrics. He suggested considering the number of inputs and outputs when evaluating expressions, as well as the equipment involved.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nEngineers typically use heuristic approaches and constraints to find solutions that balance metrics such as cost, power, and performance when optimizing logic expressions. Computer-aided design (CAD) tools are used to compare alternative formulations and decide which one is best in context. Metrics such as variable counting and operation counting are used to estimate the area needed for a design.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nWhen evaluating the best way to express a Boolean function, techniques such as two-level logic and multi-metric optimization can be used. Two-level logic involves expressing a logic function in either the SOP or POS form, while multi-metric optimization involves identifying metrics of interest and making use of Pareto optimality to reduce the number of metrics.""
+ }
+]","{
+ ""id"": 36
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of Edward Veitch's article on simplifying truth functions?\n#### Option 1\n-------\nEdward Veitch's article on simplifying truth functions aims to provide guidance on how to determine the \""best\"" way to express a Boolean function, taking into account factors such as cost, power and performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nEdward Veitch's article on simplifying truth functions aims to demonstrate how two-level logic can be used to express logical functions and graphically manipulate expressions, making it easier to map them into CMOS gates. Additionally, it introduces methods for multi-metric optimization when solving engineering problems.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe purpose of Edward Veitch's article is to demonstrate how Boolean logic functions can be expressed using a combination of basic AND, OR, and NOT functions, thus demonstrating the concept of logical completeness.""
+ }
+]","{
+ ""id"": 37
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the three high-level metrics commonly used to evaluate chip designs?\n#### Option 1\n-------\nThe three high-level metrics commonly used to evaluate chip designs are cost, power, and performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe three high-level metrics commonly used to evaluate chip designs are heuristic approaches, constraints, and computer-aided design (CAD).""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe three high-level metrics commonly used to evaluate chip designs are chip area, chip cost, and power consumption.""
+ }
+]","{
+ ""id"": 38
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is a literal in an expression of F?\n#### Option 1\n-------\nIn the context of C programming, a literal is a value that is expressed directly in the code. This could include numerical values, strings, characters, and Boolean values.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA literal is a variable or its complement that appears in an expression of a function F, such as in a minterm or maxterm.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA literal in an expression of F is a single variable, such as A or B, that corresponds to a corner of the cube. It is used to form products of literals which can be used to represent implicants of the function.""
+ }
+]","{
+ ""id"": 39
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is a sum-of-products form?\n#### Option 1\n-------\nA sum-of-products form is an expression for a function on N variables which is a product of sums of literals, where each variable or its complement appears exactly once.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe sum-of-products form is an expression of a logic function as a sum of its prime implicants.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA sum-of-products form is a sum composed of products of literals, where terms in the sum need not be minterms. It is used to express logic functions concisely, for example by summing minterms for each output value of 1 in a truth table.""
+ }
+]","{
+ ""id"": 40
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": ""What are the two properties that all implicants of a logic function have?\n#### Option 1\n-------\nAll implicants occupy contiguous regions of the grid and have a height and width that are powers of two.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nAll implicants of a logic function have a width and height that are both powers of two, and they must cover all 1s produced by the function.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nAll implicants of a logic function have the same truth table and require the same number of minterms.""
+ }
+]","{
+ ""id"": 41
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": ""What is the metric used to minimize the set of prime implicants chosen when simplifying a logic function using a Karnaugh Map?\n#### Option 1\n-------\nWhen minimizing a logic function using a Karnaugh Map, the metric used is multi-metric optimization, which includes cost, power and performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe metric used to minimize the set of prime implicants chosen when simplifying a logic function using a Karnaugh Map is to choose the minimal set of prime implicants such that every 1 produced by the function is covered by at least one prime implicant.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe metric used to minimize the set of prime implicants when simplifying a logic function using a Karnaugh Map is the size and contiguity of the product terms.""
+ }
+]","{
+ ""id"": 42
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the canonical sum of a logic function?\n#### Option 1\n-------\nThe canonical sum of a logic function is the sum of minterms.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe canonical sum of a logic function is an expression in the product-of-sums (POS) form, which is formed by multiplying a maxterm corresponding to each input combination for which the function produces 0.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe canonical sum of a logic function is the expression that represents the function in terms of ANDs, ORs, and NOTs. This expression can be obtained by using logical completeness to distribute OR statements and combine like terms.""
+ }
+]","{
+ ""id"": 43
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the canonical product of a logic function?\n#### Option 1\n-------\nThe canonical product of a logic function is the product of maxterms.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe canonical product of a logic function is the simplest product of literals that covers the entire domain of the function. For example, in a 3-dimensional case, this would be the product 1 which evaluates to 1 for any variable values.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe canonical product of a logic function is an expression in product-of-sums (POS) form, which is a product of sums of literals. It can be obtained by multiplying the maxterm corresponding to each input combination for which the function produces 0.""
+ }
+]","{
+ ""id"": 44
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is two-level logic?\n#### Option 1\n-------\nTwo-level logic is a way of expressing logic functions using two functions to reach an output. It is popular due to its ability to be easily mapped into CMOS technology, which only supports NAND and NOR gates. DeMorgan's laws can be used to express the function both algebraically and graphically.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nTwo-level logic is a method of constructing Boolean functions from AND, OR, and NOT gates. It involves combining minterms to form an expression that describes the desired function. The Karnaugh map (K-map) is a tool commonly used for visualizing and manipulating two-level logic expressions.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nTwo-level logic is a way of designing and implementing logic circuits using Boolean functions, transistors, and other electronic components. It involves translating Boolean logic functions into algebraic, truth table, K-map, or canonical forms for implementation in hardware. It also involves applying strategies such as making use of human algorithms and bit-slicing to simplify design problems. Additionally, two-level logic requires an understanding of tradeoffs between cost/area and performance when designing circuits.""
+ }
+]","{
+ ""id"": 45
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of using two-level logic in CMOS technology?\n#### Option 1\n-------\nTwo-level logic is used in CMOS technology to simplify the mapping of logic expressions into CMOS gates, since it only supports NAND and NOR directly.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nTwo-level logic is used in CMOS technology to simplify the design of complex digital circuits by combining multiple logic gates into a single gate. This reduces the number of transistors required and makes it easier to design larger and more powerful digital systems.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nTwo-level logic is used in CMOS technology to provide a logically complete set of functions, which allows us to create any desired bit combination without having to worry about analog issues such as noise. This ensures that any new technology can be easily implemented and has the potential to replace the current one. NAND and NOR are two examples of these functions, which can produce any output given the correct input.""
+ }
+]","{
+ ""id"": 46
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": ""What is the concept of Multi-Metric Optimization?\n#### Option 1\n-------\nMulti-Metric Optimization is the process of evaluating chip designs based on multiple criteria, such as cost, power, and performance. It involves finding the optimal design that meets all of these criteria in order to maximize efficiency and minimize costs.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nMulti-Metric Optimization is a process of finding an optimal solution to a problem by balancing multiple metrics such as cost, power, and performance. This is often done through heuristic approaches that use computational resources and algorithms to find solutions that meet the desired criteria. Human engineers may impose constraints on the design and restructure the implementation of a larger design so as to optimize logic functions used in the design. Today, this optimization is almost entirely done by computers.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nMulti-Metric Optimization is the process of using a combination of multiple metrics to evaluate the performance of a design. This involves reducing the set of metrics to as few as possible, and then turning them into thresholds or weighted linear sums. Pareto optimality can be used to identify interesting designs by removing any points that are not Pareto optimal. Design-space exploration is used to calculate points that are Pareto optimal, which can then be plotted on a graph with two axes representing different metrics such as energy consumption and performance.""
+ }
+]","{
+ ""id"": 47
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": ""What is Pareto optimality and how can it be used to identify interesting designs?\n#### Option 1\n-------\nPareto optimality is a concept used to identify interesting designs when there are multiple metrics involved. It is based on the idea that if a design D_1 is better than a second design D_2 for all metrics, then D_1 dominates D_2. A design is said to be Pareto optimal if no other design dominates it. This concept can be applied by plotting different designs in terms of their metrics and removing any points which do not represent Pareto optimal designs. The remaining points form what is known as the Pareto curve or surface, which can then be used to identify interesting designs. An example of this application was demonstrated in Neal Crago's Ph.D dissertation, where he compared hundreds of thousands of processor designs based on two metrics - average performance and energy consumption - and identified those that were Pareto optimal for desktop use.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nPareto optimality is a concept used in multi-metric optimization, which states that no design can improve the performance of one metric without negatively impacting another. It identifies designs which are considered \""best\"" based on the criteria given, since none of them can be improved upon without sacrificing another. This allows engineers to quickly identify interesting designs and decide which one best meets their needs.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nPareto optimality is an approach to multi-metric optimization where a design is considered optimal if no other design can improve one of the metrics without reducing another. This means that all designs that meet this criterion are interesting because they represent the best balance between multiple objectives, such as cost, power, or performance. In practice, human engineers use heuristics to find solutions that attempt to strike a balance between these metrics and impose constraints in order to guide the process. Computer-aided design (CAD) tools are used for manipulating logic expressions and finding solutions that optimize these metrics.""
+ }
+]","{
+ ""id"": 48
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of cross-coupled inverters in logic components?\n#### Option 1\n-------\nCross-coupled inverters are used to store a single bit in logic components, allowing for the manipulation and storage of information.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nCross-coupled inverters are used in logic components to create a feedback loop, allowing the circuit to remember and store information. This allows the circuit to be used for sequential logic, where the output depends on the previous inputs.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nCross-coupled inverters are used in logic components to create a feedback loop, allowing the output of the device to be stored and used as an input. This allows for the implementation of sequential logic, which can be used to create memory elements or shift registers.""
+ }
+]","{
+ ""id"": 49
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the benefits of using a clocked synchronous abstraction when designing systems that store and manipulate bits?\n#### Option 1\n-------\nUsing a clocked synchronous abstraction when designing systems that store and manipulate bits allows for better timing control, as the timing of events can be precisely determined. Additionally, this abstraction helps to reduce the complexity of logic designs by abstracting away timing issues.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nUsing a clocked synchronous abstraction when designing systems that store and manipulate bits provides several benefits, including faster completion of comparisons, more realistic area and timing metrics, the ability to easily extend software capabilities by using the carry out of an adder, and the ability to represent all states as patterns using a fixed number of bits. Additionally, transition rules can be easily implemented with Boolean logic expressions.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nUsing a clocked synchronous abstraction when designing systems that store and manipulate bits provides several benefits. By doing so, a designer can eliminate a significant amount of complexity from the circuit design. Additionally, it allows for the identification of essential hazards related to clock skew which can be avoided by properly distributing the clock signal. Lastly, it simplifies the implementation of state tables and K-maps which are used to describe states and transitions in such systems.""
+ }
+]","{
+ ""id"": 50
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of a gated D latch?\n#### Option 1\n-------\nThe purpose of a gated D latch is to store one bit of data, which can be copied into the stored bit when enabled by an input.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe purpose of a gated D latch is to store one bit of data, allowing it to be written and read when needed.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA gated D latch is used to store one bit of information. It consists of two cross-coupled inverters (or NAND gates) and an input, which can be used to set the stored bit to either a 0 or a 1.""
+ }
+]","{
+ ""id"": 51
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the difference between a gated D latch and an S-R latch?\n#### Option 1\n-------\nA gated D latch has an input called \""WE\"" (write enable) which allows the user to control when the value of D is copied to Q, while an S-R latch has two inputs: a set input and a reset input, both of which are active high.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA gated D latch uses a single input to control when data is loaded into the flip-flop. An S-R latch uses two inputs, a set and reset signal, to control when data is loaded into the flip-flop.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA gated D latch stores a single bit based on the input that is sent to it when the clock is enabled. An S-R latch stores a single bit based on two inputs (S and R) that are sent to it, regardless of the clock.""
+ }
+]","{
+ ""id"": 52
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of using a clock signal in a clocked synchronous sequential circuit?\n#### Option 1\n-------\nThe purpose of using a clock signal in a clocked synchronous sequential circuit is to ensure that the stored bits are changed at regular intervals, allowing for predictable behavior and timing.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe purpose of using a clock signal in a clocked synchronous sequential circuit is to synchronize the transitions between states and ensure that essential hazards related to clock skew are eliminated.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe purpose of using a clock signal in a clocked synchronous sequential circuit is to simplify the behavior of the circuit by ensuring that all elements change at the same time, allowing us to treat time as having discrete values.""
+ }
+]","{
+ ""id"": 53
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the advantage of treating time as having discrete values in clocked synchronous sequential circuits?\n#### Option 1\n-------\nClocked synchronous sequential circuits allow for abstracting away timing issues and provide a simpler way of designing systems that store and manipulate bits. This approach also allows for easier debugging, as the behavior of the system can be more easily observed.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nClocked synchronous sequential circuits benefit from treating time as having discrete values because it allows for the identification and elimination of essential hazards, which occur only in the form of clock skew.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe advantage of treating time as having discrete values in clocked synchronous sequential circuits is that it allows us to look at the state of the system, calculate the inputs to our flip-flops through the combinational logic that drives their D inputs, and be confident that when time moves to the next discrete value, we will know the new bit values stored in our flip-flops. This simplifies behavior by using a clock signal and allows all elements to change at the same time.""
+ }
+]","{
+ ""id"": 54
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is a static-1 hazard in two-level circuits?\n#### Option 1\n-------\nA static-1 hazard in two-level circuits occurs when two adjacent 1s in the Karnaugh map are not covered by a common implicant. This can lead to unreliable behavior, as the output may fall in response to a glitch.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA static-1 hazard is a glitch in an output that functionally remains stable at 1 when the input shifts from ABC=110 to 100, caused by the possibility that the upper AND gate driven by B might go low before the lower AND gate driven by goes high.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA static-1 hazard is a situation in which two inputs to a two-level circuit are both high, resulting in an output that does not accurately reflect the desired logic. This can occur due to timing skew or other factors, and can cause unreliable behavior.""
+ }
+]","{
+ ""id"": 55
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can static hazards be eliminated in two-level circuits?\n#### Option 1\n-------\nStatic hazards can be eliminated in two-level circuits by adding consensus terms to ensure that some AND gate remains high through every transition between input states with output 1. This can be done by extending the circuit with the necessary terms and using a Karnaugh map to identify which terms need to be added.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nStatic hazards can be eliminated in two-level circuits by using a clock signal with uniform timing, treating time as having discrete values, and ensuring that all elements of the circuit change at the same time.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nStatic hazards can be eliminated in two-level circuits by using DeMorgan's laws to replace OR gates with NAND gates and inverting the inputs, or replacing AND gates with NOR gates and inverting the inputs. This allows us to use only NAND or NOR gates, which are directly supported by CMOS technology.""
+ }
+]","{
+ ""id"": 56
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the definition of a dynamic hazard?\n#### Option 1\n-------\nA dynamic hazard is when an expected change in an output does not occur smoothly, but instead bounces between its original and new values before settling at the new value.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA dynamic hazard is a circuit that exhibits a glitch in an output that should remain static and at a value of 1.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA dynamic hazard is an unexpected change in the output of a circuit due to timing skew caused by quickly changing inputs. This can lead to unreliable behavior, and is detected by examining the state machine of a clocked synchronous design based on flip-flops.""
+ }
+]","{
+ ""id"": 57
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the equation that defines the output of the circuit shown in the context?\n#### Option 1\n-------\nThe equation for the output of the circuit is given as Q=B+++BD.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe output of the circuit is given by the equation S=AB+.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThere is no equation provided in the context that defines the output of the circuit.""
+ }
+]","{
+ ""id"": 58
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is essential hazards in sequential feedback circuit design?\n#### Option 1\n-------\nEssential hazards are inherent to the function of a circuit and must be addressed in sequential feedback circuit design to ensure that variations in logic path lengths (timing skew) through a circuit do not expose them. In clocked synchronous circuits, essential hazards are abstracted into clock skew, or disparate clock edge arrival times at a given point in the circuit.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nEssential hazards in sequential feedback circuit design are differences between the final state when flipping a bit once and the final state when flipping a bit thrice in succession. They can cause unreliable behavior due to timing skew in the circuit.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nEssential hazards in sequential feedback circuit design are the result of clock skew, where the rising clock edge arrives at different flip-flops at different times. This can cause incorrect behavior, such as not transitioning to a new state when expected.""
+ }
+]","{
+ ""id"": 59
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can clock skew be addressed in clocked synchronous circuits?\n#### Option 1\n-------\nClock skew in clocked synchronous circuits can be addressed by distributing the clock signal evenly and avoiding unnecessary logic in the clock path.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nClock skew can be addressed in clocked synchronous circuits by using a single, uniform clock signal that ensures that all elements of the circuit change at the same time. This allows for discrete values of time, allowing engineers to calculate the inputs to flip-flops and know with certainty what bit values will be stored in them when time moves to the next discrete value.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nClock skew can be addressed in clocked synchronous circuits by evaluating the impact of timing skew on the circuit by flipping a bit three times rather than once. If a different state is reached after two more flips, timing skew could cause unreliable behavior.""
+ }
+]","{
+ ""id"": 60
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the definition of a stable state in a sequential feedback state table for a positive edge-triggered D flip-flop?\n#### Option 1\n-------\nA stable state in a sequential feedback state table for a positive edge-triggered D flip-flop is defined as a state where the inputs and outputs remain unchanged until the next input bit changes.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA stable state in a sequential feedback state table for a positive edge-triggered D flip-flop is one where the input combination does not cause any change in the internal state of the circuit, resulting in no change to its output.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA stable state in a sequential feedback state table for a positive edge-triggered D flip-flop is when the output remains static and at the same value of 1 regardless of changes in the inputs.""
+ }
+]","{
+ ""id"": 61
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can essential hazards be detected in a clocked synchronous design based on flip-flops?\n#### Option 1\n-------\nEssential hazards in a clocked synchronous design based on flip-flops can be detected by examining the sequential feedback state table. Each row contains one state, and each column contains the input bit that changes at a time. By analyzing this table, essential hazards related to clock skew can be identified.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nHazards in clocked synchronous designs can be detected by observing glitches in the output when the input shifts from one value to another. This is known as a static-1 hazard, which occurs when one of the AND gates driving the OR gate output goes low before the other rises.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nEssential hazards in a clocked synchronous design based on flip-flops can be detected by examining the state machine and determining if the next state of the machine depends on the current state. If so, an essential hazard exists, as a second rising clock edge moves the system into a second new state.""
+ }
+]","{
+ ""id"": 62
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are two specific examples of how abstraction can be used to simplify problems?\n#### Option 1\n-------\nAbstraction can be used to simplify problems by leveraging the logic of an instruction set architecture for software tasks, and by designing logic for subtraction using an adder.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\n1. Using meaningful information from the design to select a representation for the FSM's internal state, which can lead to a simpler and easier to implement design. \n2. Leveraging semantic knowledge from the abstract model to simplify implementation of functions for next-state variables and output signals.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nTwo examples of abstraction that can simplify problems are two-level logic and multi-metric optimization. Two-level logic is a way of expressing logic functions using two levels that refer to the number of functions through which an input passes to reach an output. Multi-metric optimization is a technique used to reduce the number of metrics considered when evaluating possible designs by identifying metrics with no practical impact, setting threshold values, eliminating redundant metrics, and using Pareto optimality.""
+ }
+]","{
+ ""id"": 63
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the three reasons why the potential loss of efficiency due to abstraction is often acceptable?\n#### Option 1\n-------\nAbstraction is often acceptable because it reduces the cost of manufacturing a chip, decreases energy consumption, and increases performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe three reasons why the potential loss of efficiency due to abstraction is often acceptable are: 1) the complexity of the problem makes it difficult to find an optimal solution; 2) constraints imposed by human engineers can guide the process; and 3) computers do most of the work in manipulating logic expressions for optimization.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThree reasons why the potential loss of efficiency due to abstraction is often acceptable are: 1) The simplicity of the approach; 2) The ability to design circuits that can add a single bit and pass any necessary information into another copy of itself; and 3) Leveraging our approach as humans to build adders of any size.""
+ }
+]","{
+ ""id"": 64
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the overflow condition for unsigned subtraction?\n#### Option 1\n-------\nThe overflow condition for unsigned subtraction is that the result is less than 0, which cannot be represented in {N-bit} unsigned representation.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe overflow condition for unsigned subtraction is given by the equation A_{N-1} B_{N-1} D_{N-1}+A_{N-1} {B_{N-1}} {D_{N-1}}.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nUnsigned subtraction overflows if and only if the result is less than 0.""
+ }
+]","{
+ ""id"": 65
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the overflow condition for 2's complement subtraction?\n#### Option 1\n-------\nAddition of two {N-bit} 2's complement numbers A and B overflows if either (A<0 and B<0 and S) or (A and B and S<0).""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe overflow condition for subtraction of two {N-bit} 2's complement numbers can be written as: A_{N-1} B_{N-1} S_{N-1} + A_{N-1} B_{N-1} S_{N-1}, where A, B and S are the bits of the two numbers being subtracted and their sum respectively.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe overflow condition for 2's complement subtraction is that the sum S returned from the add unit is outside the representable range [-2^{N-1},2^{N-1}-1].""
+ }
+]","{
+ ""id"": 66
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can we use a 7-input K-map to check whether an ASCII character is an upper-case letter?\n#### Option 1\n-------\nWe can use a 7-input K-map to check whether an ASCII character is an upper-case letter by constructing a function U(C) that takes in the bits of the ASCII character and outputs 1 if it is an upper-case letter and 0 otherwise. The algebraic form of this function would be U=C_6 {C_5} {C_4} T_4+C_6 {C_5} C_4 T_5.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nWe cannot use a 7-input K-map to check whether an ASCII character is an upper-case letter, as a K-map requires binary inputs. However, we can construct two 7-bit comparators using the techniques discussed in Notes Set 2.4 to compare the ASCII character with the ends of the range of upper-case letters (A and Z). The outputs of these two comparators can then be routed to a NOR gate to calculate U, which will be 1 if C falls within the range of upper-case letters and 0 if it does not. Alternatively, we can also use 8-bit adders as subtracters and calculate 1's complements by hand for calculating U.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nWe can use a 7-input K-map to check whether an ASCII character is an upper-case letter by setting the select input S to 01 and then using the left mux to select 0x41 and the right mux to select 0x5A. The K-map will then compare these two values with the ASCII character represented by C, producing a result of either A<B, A=B, or A>B.""
+ }
+]","{
+ ""id"": 67
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can we use two 7-bit comparators and a NOR gate to check whether an ASCII character is an upper-case letter?\n#### Option 1\n-------\nWe can use two 7-bit comparators and a NOR gate to check if an ASCII character is an upper-case letter by comparing the character with the range of upper-case letters. If the character falls within this range, the output from both comparators will be 0 and U=1; otherwise, U=0.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nWe can use two 7-bit comparators and a NOR gate to check whether an ASCII character is an upper-case letter by changing the inputs to the comparators and then using the NOR gate as the output. The input numbers must match those defined for upper-case letters in order for the output to be true.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nWe can use two 7-bit comparators and a NOR gate to check whether an ASCII character is an upper-case letter by using two 28-to-7 muxes to create a single checker for the four ranges. The select input S is set to 01, which causes the left mux to select 0x41 and the right mux to select 0x5A. The output from the NOR gate will be TRUE if C is an upper-case letter, FALSE otherwise.""
+ }
+]","{
+ ""id"": 68
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the range of 7-bit patterns in ASCII that represent lower-case letters?\n#### Option 1\n-------\nThe range of 7-bit patterns in ASCII that represent lower-case letters is 0x61 through 0x7A.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe range of 7-bit patterns in ASCII that represent lower-case letters is from 0110000 to 1111101.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe range of 7-bit patterns in ASCII that represent lower-case letters is 0x61 to 0x7A.""
+ }
+]","{
+ ""id"": 69
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the algebraic form of the function L(C) used to check for a lower-case letter?\n#### Option 1\n-------\nL(C) = C_6 C_5 {C_4} (C_3+C_2+C_1+C_0) + C_6 C_5 C_4 ({C_3}+{C""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nL(C) = (C >= 0x61) and (C <= 0x7A)""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe function L(C) used to check for a lower-case letter is given by the following equation: L(C) = C_6 {C_5} {C_4} (C_3+{C_2} {C_1}+{C_2} {C_0}) + C_6 C_5 {C_4} ({C3}+{ C2 } +{ C1 } +{ C0 }).""
+ }
+]","{
+ ""id"": 70
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the purpose of a multiplexer?\n#### Option 1\n-------\nA multiplexer is a device used to select one of several inputs and route it to a single output. It allows the user to control which input is active based on the select signal. In this context, two groups of seven 2-to-1 muxes are used together with a single bit select signal S to choose between the inputs needed for an upper-case checker and those needed for a lower-case checker.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA multiplexer is a logic block that allows one digital signal to select which of several others is forwarded to an output. It can be used to create a checker for both upper- and lower-case letters by adding an input S that allows us to select the  function that we want.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA multiplexer is used to control a shift register and provide additional functionality, such as parallel load capability and the ability to retain its value indefinitely. It can also be used to build bidirectional shift registers.""
+ }
+]","{
+ ""id"": 71
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How does a 2-to-1 multiplexer work?\n#### Option 1\n-------\nA 2-to-1 multiplexer is a circuit that takes two input signals and selects one of them as the output, based on a single bit select signal. It uses two groups of seven (2-to-1) muxes, all controlled by the select signal S, to choose between the inputs needed for an upper-case checker and those needed for a lower-case checker. The number of select bits can then be calculated as 2(N/M), where N is the number of inputs and M is the number of outputs.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nA 2-to-1 multiplexer has two inputs from the left and one from the top. The top input allows us to choose which of the left inputs is forwarded to the output. When the input S=0, then output Q=D_0 and when S=1, then output Q=D_1.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nA 2-to-1 multiplexer is a digital logic circuit that allows two separate inputs to be selected and combined into one output. It consists of two data inputs, a selector input and an output. The selector input determines which of the two data inputs will be passed to the output. When the selector input is 0, the first data input is passed through to the output, and when it\u2019s 1, then the second data input is passed through instead.""
+ }
+]","{
+ ""id"": 72
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the bit-sliced approach introduced in Notes Set 2.3?\n#### Option 1\n-------\nThe bit-sliced approach introduced in Notes Set 2.3 is a design strategy in which one designs a logic block to handle one bit of a multi-bit operation, then replicates the bit slice logic to construct a design for the entire operation.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe bit-sliced approach is a technique used to design combinational logic for operations on groups of bits. It involves breaking down the operation into repeated operations on individual bits, mimicking the structured approach used by humans to perform these operations. This allows for designing circuits that can perform an operation on a single bit and pass any necessary information into another copy of itself, allowing the same circuit to be used in different sizes.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe bit-sliced approach is a technique for optimizing logic to compare multiple bits at once, by applying multiple copies of the resulting logic either in space or time, or using a combination of the two.""
+ }
+]","{
+ ""id"": 73
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How can algebraic manipulation and variation of the internal representation be used to illustrate design tradeoffs?\n#### Option 1\n-------\nAlgebraic manipulation and variation of the internal representation of bit-sliced comparison can be used to illustrate tradeoffs between design complexity and efficiency. By varying the number of bits in each column, the size, complexity, and speed of the design can be altered to meet different requirements. Additionally, algebraic manipulation allows for a more efficient use of resources by reducing logic gates or memory needed to store intermediate values.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nAlgebraic manipulation of the internal representation of a Boolean function can be used to illustrate design tradeoffs by showing different ways to express the same function. For example, when calculating the carry out C from a 2-bit unsigned addition, one expression may be more efficient than another in terms of cost, power or performance. The Karnaugh Map (K-map) is a tool used to identify and visualize these tradeoffs and optimize for the desired metric.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nBit-sliced logic can be used to illustrate design tradeoffs by manipulating and varying the internal representation of a given system. For example, using a serialized design instead of a bit-sliced one can reduce the area needed while sacrificing speed.""
+ }
+]","{
+ ""id"": 74
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How do humans typically start comparing two numbers?\n#### Option 1\n-------\nHumans typically start by determining which number is larger and then comparing the difference between the two numbers.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nHumans typically start comparing two numbers by determining the relative magnitude of each number, either by directly comparing their values or through the use of mathematical operations.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nHumans typically start by comparing the two numbers' signs; if they are both negative or both positive, the larger number will have a greater absolute value. If one of the numbers is negative and the other is positive, then the negative number will have a smaller absolute value.""
+ }
+]","{
+ ""id"": 75
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What should the choice of direction depend on when building hardware to compare all of the bits at once?\n#### Option 1\n-------\nThe choice of direction should depend on the representation chosen for the comparison. For example, an alternate representation can be used which will result in a two-gate delay per bit instead of one, resulting in a more efficient design.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe choice of direction for building hardware to compare all of the bits at once should depend on the desired optimization metric, such as cost, power, or performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe choice of direction should depend on the signs of A and B, with negative numbers being converted to their positive equivalents using 2's complement.""
+ }
+]","{
+ ""id"": 76
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the two inputs and two outputs of the bit slice logic for bit M?\n#### Option 1\n-------\nThe bit slice logic for bit M has two inputs from the next least significant bit (C_1^{M-1} and C_0^{M-1}) and two outputs to the next most significant bit (C_1^M and C_0^M).""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe single bit slice logic accepts two inputs, a single bit from each of the two numbers being compared, and produces two outputs, which are stored in the flip-flops.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe two inputs are C_M and one bit each from A and B, represented internally as A and B. The two outputs are the sum bit S_M, and the carry bit C^{M+1}.""
+ }
+]","{
+ ""id"": 77
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How many bits of information need to pass from one bit to the next in the design?\n#### Option 1\n-------\nThree bits of information need to pass from one bit to the next in the design: a carry in bit, a bit from each of the two numbers being added (A and B) and a carry out bit for the next column.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nIn a digital FSM implementation, all states must be represented as patterns using a fixed number of bits, all inputs must be translated into bits, and all outputs must be translated into bits.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nIn the design, each element of the memory is assigned a unique address consisting of a combination of bits.""
+ }
+]","{
+ ""id"": 78
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the total delay for an N-bit comparator based on this implementation?\n#### Option 1\n-------\nThe total delay for an N-bit comparator based on this implementation is 2N gate delays.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe total delay for an N-bit comparator built with this design is N+3 gate delays, but N must be even.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe total delay for an N-bit comparator based on this implementation is 2N+1 gate delays.""
+ }
+]","{
+ ""id"": 79
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the maximum number of gates on any path from input to output in this design?\n#### Option 1\n-------\nThree gate delays.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe maximum number of gates on any path from input to output in this design is four.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nTwo gate delays from any of the inputs to the C_ output.""
+ }
+]","{
+ ""id"": 80
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the sources of optimization potential in logic design?\n#### Option 1\n-------\nOptimizing a logic design involves balancing cost, power and performance metrics. Cost is related to the physical silicon area required for the design, power measures energy consumption over time, and performance measures the speed at which the design operates.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nOptimization potential in logic design can be found through heuristic approaches, constraints imposed by human engineers, and computer-aided design (CAD) tools. These tools use metrics such as counting variables and operations to estimate the area needed for a design, as well as balancing metrics like cost, power, and performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nOptimizing logic design can involve a number of different approaches, such as applying multiple copies of the same logic in space (bit-slicing) or in time (serialization), or combining both. Additionally, engineers may design hardware elements that are general enough to support software extensions. Furthermore, tradeoffs between area and timing metrics can be considered when scaling the idea for more bits.""
+ }
+]","{
+ ""id"": 81
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the tradeoffs involved in optimizing logic design?\n#### Option 1\n-------\nWhen optimizing logic design, there are tradeoffs between cost, power, and performance. Cost is typically related to the physical size of the chip, while power measures energy consumption over time. Performance measures the speed at which a design operates.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nOptimizing a logic design involves balancing various metrics such as cost, power, performance and area. Heuristic approaches are used to find solutions that strike a balance between these metrics. Human engineers can impose constraints to guide the process, while computers are used for manipulation of logic expressions and comparison of alternatives.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe tradeoffs involved in optimizing logic design include the use of multiple copies of the resulting logic in space (a generalization of the bit-sliced approach), or in time (a generalization of the serialization approach), or a combination of both. Additionally, computer software can use the carry out of an adder to perform addition over multiple clock cycles, which requires designing hardware elements that are general enough to support this kind of extension. Finally, when optimizing a serial comparator design based on a 2-bit slice variant there is not much difference in terms of area but can have significant differences in terms of timing.""
+ }
+]","{
+ ""id"": 82
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What should we do when both numbers are negative when extending to 2's complement?\n#### Option 1\n-------\nSubtraction of one negative number from a second negative number can never overflow when using 2's complement.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nWhen both numbers are negative, we can subtract the two numbers using 2's complement by taking the 2's complement of the second number and adding it to the first number.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nIf both numbers A and B are negative, then the sum C of A and B is also negative. This causes an overflow if C is less than -2^(N-1), where N is the number of bits used to represent the numbers.""
+ }
+]","{
+ ""id"": 83
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What happens if we compare A_r and B_r using an (N-1)-bit unsigned comparator?\n#### Option 1\n-------\nIf we compare A_r and B_r using an (N-1)-bit unsigned comparator and find that A_r<B_r, then we can conclude that A<B. Similarly, the other possible results will give us the correct answer for two negative numbers as well.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nIf A_r and B_r are compared using an (N-1)-bit unsigned comparator, the result will indicate whether A is less than, equal to, or greater than B.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe (N-1)-bit unsigned comparator can be used to determine whether A_r is greater than or less than B_r. If A_r is greater, the result of the comparison will be a carry out of 0; if A_r is less, the result will be a carry out of 1.""
+ }
+]","{
+ ""id"": 84
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" To what extent did the representation of the three outcomes affect our ability to develop a good bit slice design?\n#### Option 1\n-------\nThe representation of the three outcomes, cost, power and performance, have a significant impact on our ability to develop a good bit slice design. These metrics can be related to each other in some cases and must be considered when optimizing the design for maximum efficiency. By taking these metrics into account when designing a chip, engineers can ensure that they are creating an efficient product with optimal cost, power consumption and performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe representation of the three outcomes (sum, carry in, and carry out) had a significant effect on our ability to develop a good bit slice design. By recognizing and mimicking the structured approach used by humans to perform addition, we were able to create an abstraction for logic design that could be used to create adders of any size. This allowed us to optimize our designs by creating efficient circuits that could be reused in multiple applications.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe representation of the three outcomes in the bit-slice design had a significant impact on its efficiency. By using a single bit slice logic and M+Q flip-flops, we were able to reduce the area needed for the design compared to a bit-sliced approach. However, this also resulted in slower operation since each cycle only produced two bits of output.""
+ }
+]","{
+ ""id"": 85
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the limitations of using different representations for odd and even bits?\n#### Option 1\n-------\nThe main limitation of using different representations for odd and even bits is that they can only detect single bit errors. The Hamming distance of the representation, which represents the minimum number of bit errors that must occur before a system may fail to detect an error in a stored value, is 1. Therefore, these representations cannot tolerate any errors.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nDifferent representations for odd and even bits have the limitation that they can only be used to represent a limited range of values. For example, if we use two bits to represent an unsigned integer, the values can range from 0 to 3. Additionally, operations such as addition and subtraction may not be as straightforward when using different representations for odd and even bits.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe limitations of using different representations for odd and even bits are that it can only be used to detect one bit errors, and if two bit errors occur, correction will produce the wrong result. Additionally, adding a parity bit to any representation with an odd Hamming distance does not always increase the Hamming distance by one as expected.""
+ }
+]","{
+ ""id"": 86
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the notational conventions and tools used to express general functions on bits?\n#### Option 1\n-------\nIn the given context, notational conventions and tools used to express general functions on bits include the names of the functions (AND, OR, NOT, etc.), mathematical variants (conjunction and disjunction for AND and OR respectively), various forms of notation (multiplication for AND and addition for OR) as well as pictorial form used in logic schematics/diagrams (flat input with round output for AND, round input with pointed output for OR).""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe notational conventions used to express general functions on bits include minterms (ANDs with one input per variable on which the function operates) and the Karnaugh map (K-map), a tool used to illustrate how to use {K-maps} with examples. Multi-metric optimization is also discussed, introducing ideas and approaches of general use to engineers for evaluating expressions based on cost, power, and performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nNotational conventions used to express general functions on bits include the use of function names at the top, followed by two variants used in Boolean algebra, and finally a version frequently used in mathematics. In addition, small circles are often added to both inputs and outputs to imply a NOT function. Lastly, truth tables are also commonly used to illustrate these functions operating on multiple inputs.""
+ }
+]","{
+ ""id"": 87
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How do logic operations enable us to express functions such as overflow conditions concisely?\n#### Option 1\n-------\nLogic operations allow us to express functions such as overflow conditions concisely by using Boolean logic expressions. These expressions use AND, OR, NOT and XOR operations to represent the function in a compact way. For example, the expression for overflow of 2-bit unsigned addition can be written as A_1B_1 + (A_1+B_1)A_0B_0.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nLogic operations allow us to express functions such as overflow conditions concisely by using AND, OR, and NOT functions in combination. This is known as \""logical completeness\"". Using these functions, we can construct a minterm for each combination of inputs that produces a 1 result for the function. We can then combine all of these minterms into an OR function to generate the desired output.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nLogic operations allow us to express overflow conditions concisely by representing them as a carry out of 0 or 1 depending on the type of operation. For unsigned subtraction, a carry out of 0 indicates an overflow while for 2's complement subtraction, no overflow can occur when subtracting one negative number from another negative number or one non-negative number from another non-negative number.""
+ }
+]","{
+ ""id"": 88
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": ""What are the two generalizations used in the truth table to the right to show the carry out C and the sum S produced by adding two 2-bit unsigned numbers?\n#### Option 1\n-------\nThe two generalizations used in the truth table to show the carry out C and the sum S produced by adding two 2-bit unsigned numbers are:  (1) C = A_1 & B_1 + A_0 & B_0; and (2) S = A_0 ^ B_0 ^ C.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe two generalizations used in the truth table are that C is equal to the OR of A and B, and S is equal to the XOR of A and B.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe two generalizations used in the truth table to the right to show the carry out C and the sum S produced by adding two 2-bit unsigned numbers are addition modulo 2 (XOR) and carry propagation (AND).""
+ }
+]","{
+ ""id"": 89
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": ""How is signed magnitude addition different from base 2 addition when the signs of the two input operands differ?\n#### Option 1\n-------\nSigned magnitude addition is different from base 2 addition when the signs of the two input operands differ, as the result of the operation will be a negative number in signed magnitude representation, while it would be a positive number in base 2 representation.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nSigned magnitude addition is different from base 2 addition when the signs of the two input operands differ because in signed magnitude addition, an extra bit (the sign bit) must be taken into account. Additionally, when two numbers with differing signs are added together, a different overflow condition applies than when two numbers with the same sign are added. If the result of adding two signed magnitudes exceeds the maximum representable number in that format, overflow occurs and a negative result is returned.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nSigned magnitude addition is different from base 2 addition when the signs of two input operands differ because the sign bit of a signed magnitude number is used as part of the calculation. For example, if one input operand is negative and the other positive, then a subtraction operation must be performed in order to obtain the sum. This is not necessary in base 2 addition since only binary digits are used for calculations.""
+ }
+]","{
+ ""id"": 90
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the meaning of the Boolean logic function NOT?\n#### Option 1\n-------\nThe NOT function, also known as negation or the inverter, accepts only a single operand and reverses its value, turning 0 into 1 and 1 into 0.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe Boolean logic function NOT evaluates to 0 if the input is 1, and to 1 if the input is 0. It is also known as logical complement or negation. It is represented by a triangle and circle in logic schematics/diagrams.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nBoolean logic function NOT is a logical operator that negates a given statement, such that if the statement is true, the result of NOT will be false, and vice versa.""
+ }
+]","{
+ ""id"": 91
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the meaning of the Boolean logic function XOR?\n#### Option 1\n-------\nXOR (also known as exclusive OR) is the \""odd\"" function: it evaluates to 1 if an odd number of input operands are equal to 1.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe XOR (exclusive OR) function evaluates to 1 if and only if an odd number of the input values are 1.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe Boolean logic function XOR (exclusive OR) evaluates to true if either, but not both, of the two inputs are true.""
+ }
+]","{
+ ""id"": 92
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the logic expression for overflow in the addition of two 1-bit unsigned numbers?\n#### Option 1\n-------\nThe overflow condition for the addition of two 1-bit unsigned numbers is given by the logic expression c_1=1, where c_1 is the carry out of the addition.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe overflow condition for addition of two 1-bit unsigned numbers can be expressed as A + B > 1, where A and B are the two numbers being added.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nAddition of two 1-bit unsigned numbers overflows if and only if (A+B>1).""
+ }
+]","{
+ ""id"": 93
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the logic expression for overflow in the addition of two N-bit 2's complement numbers?\n#### Option 1\n-------\nThe overflow condition for addition of two {N-bit} 2's complement numbers can be expressed by the logic expression: A_{N-1} B_{N-1} {S_{N-1}}+ {A_{N-1}} {B_{N-1}} S_{N-1}.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nAddition of two {N-bit} 2's complement numbers A and B overflows if and only if one of the following conditions holds:  {A<0 and B<0 and S>0} {A and B>0 and S<0}""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe logic expression for overflow in the addition of two N-bit 2's complement numbers is c_N = 1, where c_N is the carry out of the most significant bit.""
+ }
+]","{
+ ""id"": 94
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the theorem of Logical Completeness?\n#### Option 1\n-------\nThe Logical Completeness theorem states that any set of operations which can implement all Boolean logic functions (AND, OR, and NOT) forms a logically complete set.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe theorem of Logical Completeness states that given enough AND functions and 1-input NOT functions, one can express any Boolean logic function on a finite number of variables.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nLogical completeness is the idea that any logical statement can be expressed using a combination of AND, OR, and NOT operations. Edward Veitch's 1952 article on simplifying truth functions introduced this concept and stated that the complexity of the expression increases with the number of variables involved.""
+ }
+]","{
+ ""id"": 95
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the proof of Logical Completeness by construction?\n#### Option 1\n-------\nThe proof of Logical Completeness by construction involves using Lemma 1 to construct an N-input AND function, then using Lemma 3 to use as many as M NOT functions and the N-input AND function to construct a minterm for each input combination that produces a 1. Finally, Lemma 2 is used to construct an M-input OR function and OR together all of the minterms. This produces the desired logic function.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nTo prove Logical Completeness by construction, one must show that any known logically complete set of functions can be implemented using only the given functions. For example, to show that the set {AND, OR, and NOT} is logically complete, one must demonstrate that it can be implemented using only NAND.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nLogical completeness can be proven by demonstrating that any Boolean function can be expressed as an OR of minterms (ANDs with one input per variable on which the function operates). This approach is demonstrated in the example given in the context, where three expressions are presented for calculating a carry out C from two 2-bit unsigned numbers, A and B. All three expressions have the same truth table and thus represent the same mathematical function, proving that they are logically equivalent.""
+ }
+]","{
+ ""id"": 96
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the implications of logical completeness?\n#### Option 1\n-------\nLogical completeness has two important implications. First, it allows us to be assured that no matter what we want to do with bits, implementing a handful of operations correctly is enough to guarantee that we never have to worry about analog issues such as noise. Second, it provides a tool for screening potential new technologies for computers - if a new technology does not allow implementation of a logically complete set of functions, the new technology is unlikely to be successful in replacing the current one.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nLogical completeness implies that any given Boolean logic function can be expressed with a combination of AND, OR, and NOT functions. This means that it is possible to create a logical solution for any problem, but it does not necessarily lead to an efficient design. Therefore, engineers must learn how to develop an efficient implementation of a function as well as how to determine whether two logic expressions are identical without actually writing out truth tables in order to create the most effective solutions.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nLogical completeness implies that there is an infinite number of ways to express a given function, each with its own trade-offs in terms of cost, power, and performance. It is important to consider these metrics when evaluating the best way to express a Boolean function.""
+ }
+]","{
+ ""id"": 97
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the value of logical completeness as a tool in screening potential new technologies for computers?\n#### Option 1\n-------\nLogical completeness provides a tool for screening potential new technologies for computers by ensuring that any set known to be logically complete can be implemented. This guarantees that new technologies will not have to worry about analog issues like noise when using bits and allows us to know whether a new technology is likely to replace the current one.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nLogical completeness provides a powerful tool for evaluating potential new technologies for computers. It allows engineers to express an arbitrary function on bits as an OR of minterms, making it easier to identify and compare the various expressions used in a design. Additionally, logical completeness can help engineers optimize designs based on multiple metrics such as cost, power, and performance.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nLogical completeness is a useful tool for screening potential new technologies for computers, as it allows engineers to compare different logic functions and evaluate their performance based on metrics such as cost, power, and area. By using heuristic approaches to find solutions that meet certain constraints, engineers can determine which technology is best suited to their needs. Additionally, logical completeness can help engineers identify any weaknesses or inefficiencies in existing designs.""
+ }
+]","{
+ ""id"": 98
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": ""What is the generalization of logic operations to groups of bits?\n#### Option 1\n-------\nThe generalization of logic operations to groups of bits is the use of multiple copies of the resulting logic in space (bit-sliced approach) or in time (serialization approach), or a combination of both.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe generalization of logic operations to groups of bits is to pair bits from each of two groups and perform the logic operation on each pair.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe generalization of logic operations to groups of bits is multi-metric optimization, which involves evaluating a function based on multiple metrics like cost, power, and performance.""
+ }
+]","{
+ ""id"": 99
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": ""How can we compare an 8-bit 2's complement number to the value -1 using AND, OR, and NOT?\n#### Option 1\n-------\nWe can compare an 8-bit 2's complement number to the value -1 by using the AND, OR and NOT logic operations. To do this, we first convert the 8-bit number into its binary representation (A_7 A_6 A_5 A_4 A_3 A_2 A_1 A_0). Then we calculate the AND operation between each bit of this number and the corresponding bit of -1\u2019s binary representation (1111 1111). The result is a new 8-bit number indicating which bits match (bits with value 1) and which don't match (bits with value 0). If all bits in this result are 1, then it means that all bits of the original 8-bit 2's complement number matched those of -1 and thus they are equal.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nWe can compare an 8-bit 2's complement number to the value -1 using AND, OR, and NOT by first inverting the 8-bit number to obtain its 1's complement. We then use AND, OR and NOT to compare this 1's complement with the 8-bit representation of -1. If they match, we know that our original number is equal to -1.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nWe can compare an 8-bit 2's complement number to the value -1 using AND, OR, and NOT by constructing a function which produces a 1 if the number matches 11111111, and produces a 0 otherwise. This can be done with only one minterm.""
+ }
+]","{
+ ""id"": 100
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What is the rationale for using the 2's complement representation for signed integers?\n#### Option 1\n-------\nThe rationale for using the 2's complement representation for signed integers is that it allows reuse of the hardware used for addition with unsigned values, and provides a basis for performing subtraction using an add unit.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe 2's complement representation allows us to easily reuse existing hardware for addition, subtraction, and other operations. It also allows us to represent negative numbers with a single bit pattern, making it easier to design logic that can handle both positive and negative values.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe use of 2's complement representation for signed integers was originally intended to give reasonable performance when code was ported across different architectures and compilers. It also allows for flexibility in terms of size and provides a way to identify memory locations more accurately.""
+ }
+]","{
+ ""id"": 101
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How is the 2's complement representation derived based on equivalence of the addition function?\n#### Option 1\n-------\nThe 2's complement representation is derived by recognizing that the addition function for unsigned integers can be used to perform subtraction with either representation. This allows us to reuse the same hardware for both representations, incurring little or no additional cost.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe 2's complement representation is derived by performing addition with two N-bit numbers and then examining the overflow condition. This condition depends on the first bits of each number and the first bit of the sum. An expression for this overflow condition can be written in terms of these bits, which is a concise way to represent 2's complement addition.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nTo calculate the 2's complement representation, we calculate the 1's complement of a value B, then add 1. This is done by inverting each bit in B. The result of this operation is -B, which can then be added to A using an adder to find D=A-B.""
+ }
+]","{
+ ""id"": 102
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What type of information can be represented with an ordered set of bits?\n#### Option 1\n-------\nAny type of information can be represented with an ordered set of bits.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nAn ordered set of bits can represent numerical values, as well as other information such as letters, symbols and commands.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nBits can be used to represent any type of information, such as numbers or letters. In the example provided, a 3-bit unsigned representation is used to represent numbers from 0 to 7.""
+ }
+]","{
+ ""id"": 103
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" How is the number 0 represented in a 4-bit unsigned representation?\n#### Option 1\n-------\nIn a 4-bit unsigned representation, the number 0 is represented as 0000.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nIn a 4-bit unsigned representation, 0 is represented as 0000.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe 4-bit unsigned representation of the number 0 is 0000.""
+ }
+]","{
+ ""id"": 104
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What makes one representation better than another?\n#### Option 1\n-------\nVeitch's 1952 article states that the criteria for choosing a good representation of a Boolean function depend on the underlying technology used to construct it. Generally, three main metrics are used to evaluate chip designs: cost, power, and performance. Cost is related to physical silicon area, power relates to energy consumption over time and performance measures speed. These metrics are sometimes related and can be traded off against each other when finding an optimal expression for a function.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nOne representation is better than another if it has a higher Hamming distance, meaning that more bit errors must occur before a system might fail to detect them. This ensures that any single bit error can be detected, thus making the representation more reliable.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe value of the unsigned representation is in part due to its familiar base 2 arithmetic, which allows us to use nearly identical techniques to those learned in elementary school for adding, subtracting, multiplying, and dividing base 10 numbers. Additionally, if a digital system has hardware to perform operations such as addition on unsigned values, using the same piece of hardware to operate on other representations incurs little or no additional cost.""
+ }
+]","{
+ ""id"": 105
+}"
+"[
+ {
+  ""type"": ""text"",
+  ""content"": "" What are the benefits of using the 2's complement representation?\n#### Option 1\n-------\nThe 2's complement representation allows us to reuse the same hardware used for operations on unsigned values, such as addition, and also provides a basis for performing subtraction of either representation using an add unit.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 2\n-------\nThe benefits of using the 2's complement representation include the ability to reuse specific pieces of hardware, as well as the potential for more efficient logic than human engineers can provide. Additionally, it allows for subtraction with overflow conditions that are different from those of unsigned addition.""
+ },
+ {
+  ""type"": ""text"",
+  ""content"": ""#### Option 3\n-------\nThe 2's complement representation is an efficient way to represent signed numbers, since it allows for simple addition and subtraction of negative numbers. It also allows for easy comparison of two signed numbers, since the sign bit can be used to determine which number is greater or lesser.""
+ }
+]","{
+ ""id"": 106
+}"
