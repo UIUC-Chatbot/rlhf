@@ -1,0 +1,219 @@
+{
+    "os": "Linux-3.10.0-1160.66.1.el7.x86_64-x86_64-with-glibc2.10",
+    "python": "3.8.16",
+    "heartbeatAt": "2023-02-21T18:58:03.093429",
+    "startedAt": "2023-02-21T18:58:01.621834",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--local_rank=0"
+    ],
+    "state": "running",
+    "program": "train_reward_model_gptj.py",
+    "codePath": "examples/summarize_rlhf/reward_model/train_reward_model_gptj.py",
+    "git": {
+        "remote": "https://github.com/CarperAI/trlx.git",
+        "commit": "3396bf118869cd823b6909e082caf3810d8989e0"
+    },
+    "email": "kastanvday@gmail.com",
+    "root": "/mnt/project/chatbotai/kastan/rlhf/trlx",
+    "host": "hybrid.ncsa.illinois.edu",
+    "username": "kastanday",
+    "executable": "/home/kastanday/utils/mambaforge3/envs/deepspeed_py38/bin/python3.8",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 1474.8362812500006,
+        "min": 1200.0,
+        "max": 3200.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1284.667,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1274.56,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1358.642,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.537,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1597.265,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1264.306,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1292.285,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1214.794,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2238.281,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1295.507,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1277.197,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1380.175,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1591.552,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1202.197,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1239.257,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1201.025,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3021.24,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1201.025,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1388.964,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1304.296,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1200.439,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1295.8,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2399.267,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1284.228,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1201.025,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1232.958,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1882.91,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1234.277,
+            "min": 1200.0,
+            "max": 3200.0
+        }
+    ],
+    "disk": {
+        "total": 57.5012092590332,
+        "used": 48.15106201171875
+    },
+    "gpu": "Tesla V100-PCIE-32GB",
+    "gpu_count": 4,
+    "gpu_devices": [
+        {
+            "name": "Tesla V100-PCIE-32GB",
+            "memory_total": 34359738368
+        },
+        {
+            "name": "Tesla V100-PCIE-32GB",
+            "memory_total": 34359738368
+        },
+        {
+            "name": "Tesla V100-PCIE-32GB",
+            "memory_total": 34359738368
+        },
+        {
+            "name": "Tesla V100-PCIE-16GB",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 251.6266632080078
+    }
+}
