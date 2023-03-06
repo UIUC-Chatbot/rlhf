@@ -12,6 +12,23 @@ Before running everything, we need some extra packages not included in the `trlx
 pip install -r requirements.txt
 ```
 
+### Required: build deepspeed with required extensions
+Docs: https://www.deepspeed.ai/tutorials/advanced-install/#pre-install-deepspeed-ops
+```bash
+pip uninstall deepspeed
+
+DS_BUILD_CPU_ADAM=1 \
+DS_BUILD_FUSED_ADAM=1 \
+DS_BUILD_FUSED_LAMB=1 \
+DS_BUILD_TRANSFORMER=1 \
+DS_BUILD_TRANSFORMER_INFERENCE=1 \
+pip install deepspeed --global-option="build_ext" --global-option="-j32"
+
+# note failed to build on Hybrid server: DS_BUILD_UTILS=1 and ASYNC IO. 
+
+# command I actually ran:  DS_BUILD_FUSED_ADAM=1 DS_BUILD_FUSED_LAMB=1 DS_BUILD_TRANSFORMER=1 pip install deepspeed --global-option="build_ext" --global-option="-j32"
+```
+
 ### Training Process
 
 For an in-depth description of the example, please refer to our [blog post](http://wandb.me/summarize-rlhf-trlx). We leave the following for a quick overview of the fine-tuning process and what scripts to run.
