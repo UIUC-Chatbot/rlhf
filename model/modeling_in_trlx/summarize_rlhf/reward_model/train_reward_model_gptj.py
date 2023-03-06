@@ -5,18 +5,13 @@ from datasets import load_dataset
 from reward_model import GPTRewardModel
 from torch.utils.data import Dataset
 from tqdm import tqdm
-
 from transformers import AutoTokenizer, Trainer, TrainingArguments
-
-# export cuda visiable devices (to skip 3rd small one. )
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
 
 #### RUN ME USING:  CUDA_VISIBLE_DEVICES=0 deepspeed train_reward_model_gptj.py
 #### OR maybe (untested):    CUDA_VISIBLE_DEVICES=0 deepspeed --num_gpus=1 train_reward_model_gptj.py
 
 
-def create_comparison_dataset(path="CarperAI/openai_summarize_comparisons", split="train"):
+def create_comparison_dataset(path="kastan/rlhf-qa-conditional-generation-v2", split="train"):
   dataset = load_dataset(path, split=split)
   pairs = []
   for sample in tqdm(dataset):
@@ -110,8 +105,8 @@ if __name__ == "__main__":
       gradient_accumulation_steps=1,
       save_strategy="steps",
       evaluation_strategy="steps",
-      per_device_train_batch_size=1,
-      per_device_eval_batch_size=1,
+      per_device_train_batch_size=2,
+      per_device_eval_batch_size=2,
       eval_accumulation_steps=1,
       eval_steps=500,
       save_steps=500,
@@ -125,7 +120,7 @@ if __name__ == "__main__":
   )
 
   # Initialize the reward model from the (supervised) fine-tuned GPT-J
-  model = GPTRewardModel("CarperAI/openai_summarize_tldr_sft")
+  model = GPTRewardModel("kastan/gptj-sft-rlhf")
 
   # Freeze the first 70% of the hidden layers of the reward model backbone
   layers = model.transformer.h

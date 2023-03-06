@@ -36,25 +36,30 @@ For an in-depth description of the example, please refer to our [blog post](http
 
 1. Train SFT:
     ```bash
-    cd sft/ && deepspeed train_gptj_summarize.py
+    cd sft/ && CUDA_VISIBLE_DEVICES=0,1,2 deepspeed train_gptj_summarize.py
     ```
     Checkpoint: [SFT](https://huggingface.co/CarperAI/openai_summarize_tldr_sft)
 
+2. Upload our checkpoint to the hub:
+
+    👉 Run the notebook `upload_sft_to_hub.ipynb` in the `sft/` directory.
+
+    Todo: make this automatic after training. 
+
 2. Train Reward Model:
     ```bash
-    cd reward_model/ && deepspeed train_reward_model_gptj.py
-    ```
-    Download reward model checkpoint:
-    ```bash
-    mkdir reward_model/rm_checkpoint
-    wget https://huggingface.co/CarperAI/openai_summarize_tldr_rm_checkpoint/resolve/main/pytorch_model.bin -O reward_model/rm_checkpoint/pytorch_model.bin
+    cd reward_model/ && CUDA_VISIBLE_DEVICES=0,1,2 deepspeed train_reward_model_gptj.py
     ```
 
 3. PPO training:
+    
+    Launch job:
     ```bash
     accelerate launch --config_file configs/default_accelerate_config.yaml trlx_gptj_text_summarization.py
     ```
     Checkpoint: [PPO](https://huggingface.co/CarperAI/openai_summarize_tldr_ppo)
+    
+    Note: No need to configure accelerate because we supply a config file for convenience.
 
     🩹 Warning: This particular training configuration requires at least 55GB of VRAM and is setup to use two GPUs, decrease `batch_size` in case you're running out of memory.
 

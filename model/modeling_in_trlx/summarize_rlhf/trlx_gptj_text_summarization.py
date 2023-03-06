@@ -15,8 +15,9 @@ REWARD_CHECKPOINT_PATH = "reward_model/rm_checkpoint/pytorch_model.bin"
 if not os.path.exists(REWARD_CHECKPOINT_PATH):
   os.makedirs("reward_model/rm_checkpoint", exist_ok=True)
   os.system(f"wget -O {REWARD_CHECKPOINT_PATH} \
-        https://huggingface.co/CarperAI/openai_summarize_tldr_rm_checkpoint/resolve/main/pytorch_model.bin")
-SFT_MODEL_PATH = "CarperAI/openai_summarize_tldr_sft"
+        https://huggingface.co/CarperAI/openai_summarize_tldr_rm_checkpoint/resolve/main/pytorch_model.bin"                                                                                                           )
+# SFT_MODEL_PATH = "CarperAI/openai_summarize_tldr_sft"
+SFT_MODEL_PATH = "kastan/gptj-sft-rlhf"
 
 if __name__ == "__main__":
   # Load the pre-trained reward model
