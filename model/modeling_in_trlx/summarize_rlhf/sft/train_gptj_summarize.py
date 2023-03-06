@@ -18,7 +18,7 @@ def set_seed(seed_val=42):
 
 if __name__ == "__main__":
   output_dir = "gptj-supervised-summarize-checkpoint"
-  train_batch_size = 16
+  train_batch_size = 3
   gradient_accumulation_steps = 1
   learning_rate = 1e-5
   eval_batch_size = 1
@@ -40,7 +40,7 @@ if __name__ == "__main__":
   # data_path = "CarperAI/openai_summarize_tldr"
   # has prompt -> label
   # I have prompt -> completion
-  data_path = "kastan/rlhf-qa-conditional-generation"
+  data_path = "kastan/rlhf-qa-conditional-generation-v2"
   train_dataset = TLDRDataset(
       data_path,
       tokenizer,
