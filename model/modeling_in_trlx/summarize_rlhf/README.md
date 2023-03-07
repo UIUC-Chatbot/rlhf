@@ -64,7 +64,8 @@ For an in-depth description of the example, please refer to our [blog post](http
     🩹 Warning: This particular training configuration requires at least 55GB of VRAM and is setup to use two GPUs, decrease `batch_size` in case you're running out of memory.
 
 
-### Results
+# Legacy from original blog post
+###  Results
 
 The following tables display ROUGE and reward scores on the test set of the TL;DR dataset between SFT and PPO models.
 
