@@ -95,28 +95,34 @@ if __name__ == "__main__":
   tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
   tokenizer.pad_token = tokenizer.eos_token
 
-  if not os.path.exists("rm_checkpoint"):
-    os.mkdir("rm_checkpoint")
+  # output_dir = "/home/kastanday/reward_model_checkpoint"
+  output_dir = "reward_model_checkpoint"
+  if not os.path.exists(output_dir):
+    os.mkdir(output_dir)
 
   training_args = TrainingArguments(
-      output_dir="rm_checkpoint/",
+      output_dir=output_dir,
       num_train_epochs=5,
       logging_steps=10,
       gradient_accumulation_steps=1,
       save_strategy="steps",
+      save_steps=450,
+      save_total_limit=1,
       evaluation_strategy="steps",
-      per_device_train_batch_size=2,
+      per_device_train_batch_size=1,
       per_device_eval_batch_size=2,
       eval_accumulation_steps=1,
       eval_steps=500,
-      save_steps=500,
       warmup_steps=100,
       logging_dir="./logs",
-      fp16=True,
+      fp16=True,  # maybe switch to FP32, not convinced this will work. 
       bf16=False,  # not supported on V100. 
       learning_rate=1e-5,
-      deepspeed="ds_config_gpt_j.json",
-      save_total_limit=1,
+      deepspeed="./ds_config_gpt_j.json",
+      push_to_hub=True,
+      hub_strategy='end',
+      # max_steps=20,  # for testing
+      hub_token="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",
   )
 
   # Initialize the reward model from the (supervised) fine-tuned GPT-J
@@ -130,7 +136,7 @@ if __name__ == "__main__":
     layer.requires_grad_(False)
 
   # Create the comparisons datasets
-#   data_path = "CarperAI/openai_summarize_comparisons"
+  # data_path = "CarperAI/openai_summarize_comparisons"
   data_path = "kastan/rlhf-qa-comparisons"
   train_pairs = create_comparison_dataset(data_path, "train")
   #   val_pairs = create_comparison_dataset(data_path, "train")

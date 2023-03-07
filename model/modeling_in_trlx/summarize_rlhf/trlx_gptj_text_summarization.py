@@ -7,15 +7,18 @@ import trlx
 from datasets import load_dataset
 from reward_model.reward_model import GPTRewardModel
 from tqdm import tqdm
+from transformers import AutoTokenizer
 from trlx.data.configs import TRLConfig
 
-from transformers import AutoTokenizer
+os.environ['TRANSFORMERS_CACHE'] = "/home/kastanday/.cache/huggingface/transformers"
 
-REWARD_CHECKPOINT_PATH = "reward_model/rm_checkpoint/pytorch_model.bin"
+REWARD_CHECKPOINT_PATH = "reward_model/reward_model_checkpoint/checkpoint-450/pytorch_model.bin"
 if not os.path.exists(REWARD_CHECKPOINT_PATH):
-  os.makedirs("reward_model/rm_checkpoint", exist_ok=True)
-  os.system(f"wget -O {REWARD_CHECKPOINT_PATH} \
-        https://huggingface.co/CarperAI/openai_summarize_tldr_rm_checkpoint/resolve/main/pytorch_model.bin"                                                                                                           )
+  raise ValueError("Reward model checkpoint not found. Please download it from Kastan's huggingface account,"
+                   "or train a new one, and place it in the reward_model/reward_model_checkpoint folder.")
+  # os.makedirs("reward_model/reward_model_checkpoint", exist_ok=True)
+  # os.system(f"wget -O {REWARD_CHECKPOINT_PATH} \
+  #       https://huggingface.co/CarperAI/openai_summarize_tldr_reward_model_checkpoint/resolve/main/pytorch_model.bin")
 # SFT_MODEL_PATH = "CarperAI/openai_summarize_tldr_sft"
 SFT_MODEL_PATH = "kastan/gptj-sft-rlhf"
 
@@ -55,21 +58,23 @@ if __name__ == "__main__":
 
   def get_prompt_dataset(prompts, max_length):
     """
-        Get the prompt after T5 decoding to make sure dictionary
-        of prompts and summaries is consistent decode prompt from trlX pipeline
-        """
+    Get the prompt after T5 decoding to make sure dictionary
+    of prompts and summaries is consistent decode prompt from trlX pipeline
+    
+    "Task: Open book QA. Question: %s \nContext : %s \nAnswer : "
+    """
     formatted_prompts = []
     for i in tqdm(range(len(prompts))):
       tmp = tokenizer.decode(
           tokenizer(
-              prompts[i].split("TL;DR:")[0],
+              prompts[i],
               truncation=True,
-              max_length=max_length - 5,  # to make sure "TL;DR" dont get truncated
+              max_length=max_length - 14,  # to make sure "Question + Answer" dont get truncated
               add_special_tokens=False,
           )["input_ids"],
           skip_special_tokens=True,
       ).strip()
-      tmp = tmp + "\nTL;DR:"
+      tmp = "Question: " + tmp + "\nAnswer:"
       tmp = tokenizer.decode(
           tokenizer(tmp, truncation=True, max_length=max_length, add_special_tokens=False)["input_ids"],
           skip_special_tokens=True,
@@ -78,8 +83,9 @@ if __name__ == "__main__":
     return formatted_prompts
 
   def reward_fn(samples: List[str], **kwargs):
-    # todo: customize the split!!! ----------------------- ----------------------------
-    original_samples = [text.split("TL;DR:")[0] + "TL;DR: " for text in samples]
+    # todo: customize the split!!! ---------------------------------------------------
+    # we might be good to go!
+    original_samples = [text.split("Answer:")[0] + "Answer: " for text in samples]
     original_samples = [text + post_summary_dict[text.strip()] for text in original_samples]
     original_scores = get_scores(original_samples)
     scores = get_scores(samples)
@@ -89,31 +95,33 @@ if __name__ == "__main__":
   config_path = pathlib.Path(__file__).parent.joinpath("configs/ppo_config_summ_gptj.yml")
   config = TRLConfig.load_yaml(config_path)
 
-  tokenizer = AutoTokenizer.from_pretrained(config.tokenizer.tokenizer_path)
+  tokenizer = AutoTokenizer.from_pretrained(config.tokenizer.tokenizer_path)  #, force_download=True)
   tokenizer.pad_token = tokenizer.eos_token
   tokenizer.padding_side = "left"
   max_length_input = config.train.seq_length - config.method.gen_kwargs["max_new_tokens"]
 
-  dataset = load_dataset("CarperAI/openai_summarize_tldr")
+  # dataset = load_dataset("CarperAI/openai_summarize_tldr")
   # has 'prompt' and 'label' keys
   # https://huggingface.co/datasets/CarperAI/openai_summarize_tldr
+  # mine has 'prompt' and 'completion'
+  dataset = load_dataset("kastan/rlhf-qa-conditional-generation-v2")
 
   # Store data into prompt and label pairs
-  train_set = [(sample["prompt"], sample["label"]) for sample in dataset["train"]]
-  val_set = [(sample["prompt"], sample["label"]) for sample in dataset["valid"]]
+  train_set = [(sample["prompt"], sample["completion"]) for sample in dataset["train"]]
+  val_set = [(sample["prompt"], sample["completion"]) for sample in dataset["valid"]]
 
   # Split contents into summaries and labels
-  train_posts, train_summaries = zip(*train_set)
-  val_posts, val_summaries = zip(*val_set)
+  train_prompt, train_completion = zip(*train_set)
+  val_prompts, val_completions = zip(*val_set)
 
   # Get the OpenAI summaries
   post_summary_dict = {}
-  train_prompts = get_prompt_dataset(train_posts, max_length_input)
+  train_prompts = get_prompt_dataset(train_prompt, max_length_input)
   for i in range(len(train_prompts)):
-    post_summary_dict[train_prompts[i]] = train_summaries[i]
-  val_prompts = get_prompt_dataset(val_posts, max_length_input)
+    post_summary_dict[train_prompts[i]] = train_completion[i]
+  val_prompts = get_prompt_dataset(val_prompts, max_length_input)
   for i in range(len(val_prompts)):
-    post_summary_dict[val_prompts[i]] = val_summaries[i]
+    post_summary_dict[val_prompts[i]] = val_completions[i]
 
   trainer = trlx.train(
       reward_fn=reward_fn,

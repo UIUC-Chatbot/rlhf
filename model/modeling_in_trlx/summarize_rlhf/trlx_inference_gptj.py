@@ -21,9 +21,11 @@ def load_model(path):
 
 REWARD_CHECKPOINT_PATH = "reward_model/rm_checkpoint/pytorch_model.bin"
 if not os.path.exists(REWARD_CHECKPOINT_PATH):
-  os.makedirs("reward_model/rm_checkpoint", exist_ok=True)
-  os.system(f"wget -O {REWARD_CHECKPOINT_PATH} \
-        https://huggingface.co/CarperAI/openai_summarize_tldr_rm_checkpoint/resolve/main/pytorch_model.bin")
+  raise ValueError("Reward model checkpoint not found. Please download it from Kastan's huggingface account,"
+                   "or train a new one, and place it in the reward_model/rm_checkpoint folder.")
+  # os.makedirs("reward_model/rm_checkpoint", exist_ok=True)
+  # os.system(f"wget -O {REWARD_CHECKPOINT_PATH} \
+  #       https://huggingface.co/CarperAI/openai_summarize_tldr_rm_checkpoint/resolve/main/pytorch_model.bin")
 rw_tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
 rw_tokenizer.pad_token = rw_tokenizer.eos_token
 rw_model = GPTRewardModel("CarperAI/openai_summarize_tldr_ppo")
@@ -137,7 +139,9 @@ def inference_batches(model, tokenizer, test_post_list, test_summ_list, batch_si
 
 
 if __name__ == "__main__":
-  model, tokenizer = load_model("CarperAI/openai_summarize_tldr_ppo")
+  #  TODO: implement this, by uploading our final RLHF/PPO fine-tuned model.
+  # model, tokenizer = load_model("CarperAI/openai_summarize_tldr_ppo")
+  model, tokenizer = load_model("kastan/openai_summarize_tldr_ppo")
 
   # test_post_list = [sample["prompt"] for sample in load_dataset("CarperAI/openai_summarize_tldr", split="test")]
   # test_summ_list = [sample["label"] for sample in load_dataset("CarperAI/openai_summarize_tldr", split="test")]

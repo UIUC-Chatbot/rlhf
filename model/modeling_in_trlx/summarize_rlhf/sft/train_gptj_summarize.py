@@ -4,7 +4,8 @@ import evaluate
 import numpy as np
 import torch
 from summarize_dataset import TLDRDataset
-from transformers import (AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, default_data_collator)
+from transformers import (AutoModelForCausalLM, AutoTokenizer, Trainer,
+                          TrainingArguments, default_data_collator)
 
 #### RUN ME USING:  CUDA_VISIBLE_DEVICES=0 deepspeed train_reward_model_gptj.py
 
@@ -89,6 +90,7 @@ if __name__ == "__main__":
       warmup_steps=100,
       eval_steps=eval_steps,
       save_steps=save_steps,
+      save_total_limit=1,
       load_best_model_at_end=True,
       logging_steps=50,
       deepspeed="./ds_config_gptj.json",
