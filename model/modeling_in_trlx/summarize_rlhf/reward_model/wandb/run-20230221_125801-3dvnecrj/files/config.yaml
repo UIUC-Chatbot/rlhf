@@ -2,7 +2,7 @@ wandb_version: 1
 
 _name_or_path:
   desc: null
-  value: CarperAI/openai_summarize_tldr_sft
+  value: kastan/gptj-sft-rlhf
 _wandb:
   desc: null
   value:
