@@ -12,6 +12,8 @@ from trlx.data.configs import TRLConfig
 
 os.environ['TRANSFORMERS_CACHE'] = "/home/kastanday/.cache/huggingface/transformers"
 
+# USAGE: CUDA_VISIBLE_DEVICES=0,1,2,3 TRANSFORMERS_CACHE=/home/kastanday/.cache/huggingface/transformers accelerate launch --config_file configs/default_accelerate_config.yaml trlx_gptj_text_summarization.py
+
 REWARD_CHECKPOINT_PATH = "reward_model/reward_model_checkpoint/checkpoint-450/pytorch_model.bin"
 if not os.path.exists(REWARD_CHECKPOINT_PATH):
   raise ValueError("Reward model checkpoint not found. Please download it from Kastan's huggingface account,"

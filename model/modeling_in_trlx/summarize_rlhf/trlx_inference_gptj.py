@@ -19,7 +19,7 @@ def load_model(path):
   return model, tokenizer
 
 
-REWARD_CHECKPOINT_PATH = "reward_model/rm_checkpoint/pytorch_model.bin"
+REWARD_CHECKPOINT_PATH = "reward_model/reward_model_checkpoint/checkpoint-450/pytorch_model.bin"
 if not os.path.exists(REWARD_CHECKPOINT_PATH):
   raise ValueError("Reward model checkpoint not found. Please download it from Kastan's huggingface account,"
                    "or train a new one, and place it in the reward_model/rm_checkpoint folder.")
@@ -28,7 +28,8 @@ if not os.path.exists(REWARD_CHECKPOINT_PATH):
   #       https://huggingface.co/CarperAI/openai_summarize_tldr_rm_checkpoint/resolve/main/pytorch_model.bin")
 rw_tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
 rw_tokenizer.pad_token = rw_tokenizer.eos_token
-rw_model = GPTRewardModel("CarperAI/openai_summarize_tldr_ppo")
+
+rw_model = GPTRewardModel("kastan/rlhf-qa-ppo")  # orig: CarperAI/openai_summarize_tldr_ppo
 rw_model.load_state_dict(torch.load(REWARD_CHECKPOINT_PATH))
 rw_model.half()
 rw_model.eval()
@@ -69,14 +70,18 @@ def inference(model, tokenizer):
   post_list = []
   rouge = evaluate.load("rouge")
   count = 0
-  for post, summarize in tqdm(zip(test_post_list, test_summ_list), total=len(test_post_list)):
+  for post, summarize in tqdm(zip(test_question_list, test_answer_list), total=len(test_question_list)):
+    # kas adding this when it should be in the dataset
+    post = post + ' Answer:'  # todo: cheap hack
+
     encode_dict = tokenizer(post, return_tensors="pt", padding=False, truncation=True)
     txt_tokens = encode_dict["input_ids"].cuda()
     attention_mask = encode_dict["attention_mask"].cuda()
     kwargs = {"max_new_tokens": 50, "eos_token_id": 50256, "pad_token_id": 50256}
     summ_tokens = model.generate(txt_tokens, attention_mask=attention_mask, **kwargs)
     pred = tokenizer.batch_decode(summ_tokens)[0]
-    pred = pred.split("TL;DR:")[1].replace("<|endoftext|>", "")
+    # pred = pred.split("TL;DR:")[1].replace("<|endoftext|>", "")
+    pred = pred.split("Answer:")[1].replace("<|endoftext|>", "")
     pred_list.append(pred)
     summarize_list.append(summarize)
     post_list.append(post)
@@ -90,7 +95,7 @@ def inference(model, tokenizer):
   return df
 
 
-def inference_batches(model, tokenizer, test_post_list, test_summ_list, batch_size=16):
+def inference_batches(model, tokenizer, test_question_list, test_answer_list, batch_size=16):
   model.to("cuda")
   model.eval()
 
@@ -100,9 +105,9 @@ def inference_batches(model, tokenizer, test_post_list, test_summ_list, batch_si
   rouge = evaluate.load("rouge")
 
   # Iterate over the input data in mini-batches
-  for i in tqdm(range(0, len(test_post_list), batch_size)):
-    batch_post_list = test_post_list[i:i + batch_size]
-    batch_summ_list = test_summ_list[i:i + batch_size]
+  for i in tqdm(range(0, len(test_question_list), batch_size)):
+    batch_post_list = test_question_list[i:i + batch_size]
+    batch_summ_list = test_answer_list[i:i + batch_size]
 
     # Convert input data to tensors
     encode_dict = tokenizer(
@@ -139,14 +144,13 @@ def inference_batches(model, tokenizer, test_post_list, test_summ_list, batch_si
 
 
 if __name__ == "__main__":
-  #  TODO: implement this, by uploading our final RLHF/PPO fine-tuned model.
   # model, tokenizer = load_model("CarperAI/openai_summarize_tldr_ppo")
-  model, tokenizer = load_model("kastan/openai_summarize_tldr_ppo")
+  model, tokenizer = load_model("kastan/rlhf-qa-ppo")
 
-  # test_post_list = [sample["prompt"] for sample in load_dataset("CarperAI/openai_summarize_tldr", split="test")]
-  # test_summ_list = [sample["label"] for sample in load_dataset("CarperAI/openai_summarize_tldr", split="test")]
-  test_post_list = [sample["prompt"] for sample in load_dataset("CarperAI/openai_summarize_tldr", split="test")]
-  test_summ_list = [sample["label"] for sample in load_dataset("CarperAI/openai_summarize_tldr", split="test")]
+  # test_question_list = [sample["prompt"] for sample in load_dataset("CarperAI/openai_summarize_tldr", split="test")]
+  # test_answer_list = [sample["label"] for sample in load_dataset("CarperAI/openai_summarize_tldr", split="test")]
+  test_question_list = [sample["prompt"] for sample in load_dataset("kastan/rlhf-qa-conditional-generation-v2", split="valid")]
+  test_answer_list = [sample["completion"] for sample in load_dataset("kastan/rlhf-qa-conditional-generation-v2", split="valid")]
 
   df_result = inference(model, tokenizer)
   sup_pred = df_result["pred"].values
