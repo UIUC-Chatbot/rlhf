@@ -1,7 +1,7 @@
 {
-  "train_batch_size": 9,
+  "train_batch_size": "auto",
   "fp16": {
-    "enabled": true,
+    "enabled": false,
     "min_loss_scale": 1,
     "opt_level": "O2"
   },

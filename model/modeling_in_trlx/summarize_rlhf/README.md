@@ -38,13 +38,7 @@ For an in-depth description of the example, please refer to our [blog post](http
     ```bash
     cd sft/ && CUDA_VISIBLE_DEVICES=0,1,2 deepspeed train_gptj_summarize.py
     ```
-    Checkpoint: [SFT](https://huggingface.co/CarperAI/openai_summarize_tldr_sft)
-
-2. Upload our checkpoint to the hub:
-
-    👉 Run the notebook `upload_sft_to_hub.ipynb` in the `sft/` directory.
-
-    Todo: make this automatic after training. 
+    Checkpoint: [ECE SFT](https://huggingface.co/kastan/gptj-supervised-summarize-checkpoint)
 
 2. Train Reward Model:
     ```bash

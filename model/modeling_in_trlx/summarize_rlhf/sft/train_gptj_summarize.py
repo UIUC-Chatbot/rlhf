@@ -1,11 +1,11 @@
+import os
 import random
 
 import evaluate
 import numpy as np
 import torch
 from summarize_dataset import TLDRDataset
-from transformers import (AutoModelForCausalLM, AutoTokenizer, Trainer,
-                          TrainingArguments, default_data_collator)
+from transformers import (AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, default_data_collator)
 
 #### RUN ME USING:  CUDA_VISIBLE_DEVICES=0 deepspeed train_reward_model_gptj.py
 
@@ -81,8 +81,10 @@ if __name__ == "__main__":
       per_device_train_batch_size=train_batch_size,
       per_device_eval_batch_size=eval_batch_size,
       gradient_checkpointing=True,
-      half_precision_backend=True,
-      fp16=True,
+      # half_precision_backend=True,
+      # fp16=True,
+      # half_precision_backend=True,  # FP32 all the way.
+      fp16=False,  # FP32 all the way.
       adam_beta1=0.9,
       adam_beta2=0.95,
       gradient_accumulation_steps=gradient_accumulation_steps,
@@ -94,6 +96,10 @@ if __name__ == "__main__":
       load_best_model_at_end=True,
       logging_steps=50,
       deepspeed="./ds_config_gptj.json",
+      push_to_hub=True,
+      hub_strategy='end',
+      hub_token=os.environ["HF_PERSONAL_TOKEN"],
+      # max_steps=20,  # for testing
   )
 
   trainer = Trainer(

@@ -96,7 +96,7 @@ if __name__ == "__main__":
   tokenizer.pad_token = tokenizer.eos_token
 
   # output_dir = "/home/kastanday/reward_model_checkpoint"
-  output_dir = "reward_model_checkpoint"
+  output_dir = "FP32_reward_model_checkpoint"
   if not os.path.exists(output_dir):
     os.mkdir(output_dir)
 
@@ -106,23 +106,23 @@ if __name__ == "__main__":
       logging_steps=10,
       gradient_accumulation_steps=1,
       save_strategy="steps",
-      save_steps=450,
+      save_steps=450,  # this is the size of our data...
       save_total_limit=1,
       evaluation_strategy="steps",
       per_device_train_batch_size=1,
-      per_device_eval_batch_size=2,
+      per_device_eval_batch_size=1,
       eval_accumulation_steps=1,
       eval_steps=500,
       warmup_steps=100,
       logging_dir="./logs",
-      fp16=True,  # maybe switch to FP32, not convinced this will work. 
+      fp16=False,  # maybe switch to FP32, not convinced this will work. 
       bf16=False,  # not supported on V100. 
       learning_rate=1e-5,
       deepspeed="./ds_config_gpt_j.json",
       push_to_hub=True,
       hub_strategy='end',
+      hub_token=os.environ["HF_PERSONAL_TOKEN"],
       # max_steps=20,  # for testing
-      hub_token="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",
   )
 
   # Initialize the reward model from the (supervised) fine-tuned GPT-J
