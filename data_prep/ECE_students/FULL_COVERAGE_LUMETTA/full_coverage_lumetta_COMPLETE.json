@@ -10,10 +10,12 @@
     "completion": "The 2's complement representation is a way of representing both positive and negative integers using binary digits (bits). In this system, the most significant bit (the leftmost bit) is used as a sign bit, where 0 represents a positive number and 1 represents a negative number.\n\nTo obtain the 2's complement representation of a negative integer, we take the binary representation of the positive integer that corresponds to its absolute value, then invert (flip) all of its bits, and finally add 1 to the result. For example, to find the 2's complement of -3 using 4 bits, we take the binary representation of 3, which is 0011, invert all of its bits to get 1100, and add 1 to obtain 1101, which is the 2's complement representation of -3.\n\nAccording to Steven Lumetta, to master these topics you should be able to represent decimal numbers with unsigned, 2's complement, and IEEE floating-point representations, and be able to calculate the decimal value represented by a bit pattern in any of these representations.\n\nOne important property of the 2's complement representation is that the range of representable integers is asymmetric. In an n-bit representation, the largest representable positive integer is 2^(n-1) - 1, while the largest representable negative integer is -2^(n-1). This means that the negative range includes one more integer than the positive range, because 0 is considered positive in this system. This property can cause issues when performing arithmetic with integers near the edges of the representable range.\n\nIt's always important to consider \u201coverflow\u201d when representing numbers, so be sure to handle overflow when using these numbers. \n\nTo practice these topics, Lumetta suggests writing Boolean expressions for the overflow conditions on both unsigned and 2's complement addition. Also, you should understand the tradeoffs between integer and floating-point representations for numbers.\nThe 2's complement representation is a way of representing both positive and negative integers using binary digits (bits). In this system, the most significant bit (the leftmost bit) is used as a sign bit, where 0 represents a positive number and 1 represents a negative number.\n\nTo obtain the 2's complement representation of a negative integer, we take the binary representation of the positive integer that corresponds to its absolute value, then invert (flip) all of its bits, and finally add 1 to the result. For example, to find the 2's complement of -3 using 4 bits, we take the binary representation of 3, which is 0011, invert all of its bits to get 1100, and add 1 to obtain 1101, which is the 2's complement representation of -3.\n\nAccording to Steven Lumetta, to master these topics you should be able to represent decimal numbers with unsigned, 2's complement, and IEEE floating-point representations, and be able to calculate the decimal value represented by a bit pattern in any of these representations.\n\nOne important property of the 2's complement representation is that the range of representable integers is asymmetric. In an n-bit representation, the largest representable positive integer is 2^(n-1) - 1, while the largest representable negative integer is -2^(n-1). This means that the negative range includes one more integer than the positive range, because 0 is considered positive in this system. This property can cause issues when performing arithmetic with integers near the edges of the representable range.\n\nIt's always important to consider \u201coverflow\u201d when representing numbers, so be sure to handle overflow when using these numbers. \n\nTo practice these topics, Lumetta suggests writing Boolean expressions for the overflow conditions on both unsigned and 2's complement addition. Also, you should understand the tradeoffs between integer and floating-point representations for numbers."
   },
   {
+    "chapter": "The 2's Complement Representation",
     "prompt": "What are Boolean expressions? ",
     "completion": "In computer science, Boolean expressions are used to express logical conditions in programming languages, such as \"if\" statements, \"while\" loops, and \"for\" loops. These expressions typically use logical operators, such as AND, OR, and NOT, to combine one or more Boolean values or expressions.\n\nFor example, a simple Boolean expression might be \"5 > 3\", which evaluates to true, since 5 is indeed greater than 3. Another example might be \"x < 10 AND y > 20\", which evaluates to true if x is less than 10 and y is greater than 20. A third example might be \"NOT (a OR b)\", which evaluates to true if neither a nor b is true.\n\nBoolean expressions are an essential tool for programming, as they allow programmers to write code that can make decisions and take different actions based on different conditions.\n\nAccording to Steven Lumetta, to master these topics you should be able to:\n1. Be able to write a truth table for a Boolean expression.\n2. Be able to write a Boolean expression as a sum of minterms.\n3. Write Boolean expressions for the overflow conditions on both unsigned and 2's complement addition.\nIn computer science, Boolean expressions are used to express logical conditions in programming languages, such as \"if\" statements, \"while\" loops, and \"for\" loops. These expressions typically use logical operators, such as AND, OR, and NOT, to combine one or more Boolean values or expressions.\n\nFor example, a simple Boolean expression might be \"5 > 3\", which evaluates to true, since 5 is indeed greater than 3. Another example might be \"x < 10 AND y > 20\", which evaluates to true if x is less than 10 and y is greater than 20. A third example might be \"NOT (a OR b)\", which evaluates to true if neither a nor b is true.\n\nBoolean expressions are an essential tool for programming, as they allow programmers to write code that can make decisions and take different actions based on different conditions.\n\nAccording to Steven Lumetta, to master these topics you should be able to:\n1. Be able to write a truth table for a Boolean expression.\n2. Be able to write a Boolean expression as a sum of minterms.\n3. Write Boolean expressions for the overflow conditions on both unsigned and 2's complement addition."
   },
   {
+    "chapter": "The 2's Complement Representation",
     "prompt": "Why are Boolean expressions useful?",
     "completion": "Boolean expressions are an essential tool for programming, as they allow programmers to write code that can make decisions and take different actions based on different conditions.\n\n1. Control flow\n2. Checking program correctness, such as with assert statements.\n3. Data validation\n4. Optimization, by reducing the number of operations required if a condition is met.\n\nIn summary, Boolean expressions are useful in computer science because they provide a versatile and powerful way to represent logical conditions, which are essential for control flow, program correctness, data validation, testing, and optimization.\nBoolean expressions are an essential tool for programming, as they allow programmers to write code that can make decisions and take different actions based on different conditions.\n\n1. Control flow\n2. Checking program correctness, such as with assert statements.\n3. Data validation\n4. Optimization, by reducing the number of operations required if a condition is met.\n\nIn summary, Boolean expressions are useful in computer science because they provide a versatile and powerful way to represent logical conditions, which are essential for control flow, program correctness, data validation, testing, and optimization."
   },
@@ -38,14 +40,17 @@
     "completion": "The logical \u201cAND\u201d compares N bits. If all N bits are a 1, the output is a 1. For any other case, the output is a 0. \nThe logical \u201cAND\u201d compares N bits. If all N bits are a 1, the output is a 1. For any other case, the output is a 0. "
   },
   {
+    "chapter": "Logic Operations",
     "prompt": "What does the logical \u201cOR\u201d do?",
     "completion": "The logical \u201cOR\u201d compares N bits. If there is at least a 1 appearing once or multiple times, the output is a 1. Else, the output is a 0.\nThe logical \u201cOR\u201d compares N bits. If there is at least a 1 appearing once or multiple times, the output is a 1. Else, the output is a 0."
   },
   {
+    "chapter": "Logic Operations",
     "prompt": "What does the logical \u201cNOT\u201d do?",
     "completion": "The logical \u201cNOT\u201d operator flips the bits, such that a 1 becomes a 0 and a 0 becomes a 1\nThe logical \u201cNOT\u201d operator flips the bits, such that a 1 becomes a 0 and a 0 becomes a 1"
   },
   {
+    "chapter": "Logic Operations",
     "prompt": "What does the logical \u201cXOR\u201d do?",
     "completion": "The logical \u201cXOR\u201d compares N bits, and produces output 1 if there are an odd number of 1s, and produces a 0 if there are an even number of 1s or none at all.\nThe logical \u201cXOR\u201d compares N bits, and produces output 1 if there are an odd number of 1s, and produces a 0 if there are an even number of 1s or none at all."
   },
@@ -70,6 +75,7 @@
     "completion": "To declare a variable, use the following syntax by declaring the variable type before assigning a value to it if needed. Examples are listed below for different data type.\nint x = 3;        // assigns a value 3 to the integer data type variable x\nchar lock;    // creates a char data type lock without assigning a value to it yet\nchar key = 'Q';    //creates a char data type key and assigns the character \u201cQ\u201d to it\nfloat a;      // creates a single precision floating number data type variable a\ndouble b;     // creates a double precision floating number data type variable a\nTo declare a variable, use the following syntax by declaring the variable type before assigning a value to it if needed. Examples are listed below for different data type.\nint x = 3;        // assigns a value 3 to the integer data type variable x\nchar lock;    // creates a char data type lock without assigning a value to it yet\nchar key = 'Q';    //creates a char data type key and assigns the character \u201cQ\u201d to it\nfloat a;      // creates a single precision floating number data type variable a\ndouble b;     // creates a double precision floating number data type variable a"
   },
   {
+    "chapter": "Variable Declarations",
     "prompt": "When to declare a variable in C?",
     "completion": "Any variable that needs to be used in a block of code or a function in C needs to be declared before it is used. This includes variables used to store values, temporary variables such as counters, and variables that might be used for printing. \nAny variable that needs to be used in a block of code or a function in C needs to be declared before it is used. This includes variables used to store values, temporary variables such as counters, and variables that might be used for printing. "
   },
@@ -79,14 +85,17 @@
     "completion": "The assignment operator is used when we want to assign a value into a variable, such that the variable holds that value and we can call back on it in other statements whenever we want. We use a SINGLE equal to sign for this. For example, I want to assign the number 5 to the variable temp_counter:\n\nint temp_counter = 5;  // assigns 5 to a declared integer straightaway OR\nint temp_counter; \nTemp_counter = 5;\n// declares an integer first, and then assigns the value in a different step\nThe assignment operator is used when we want to assign a value into a variable, such that the variable holds that value and we can call back on it in other statements whenever we want. We use a SINGLE equal to sign for this. For example, I want to assign the number 5 to the variable temp_counter:\n\nint temp_counter = 5;  // assigns 5 to a declared integer straightaway OR\nint temp_counter; \nTemp_counter = 5;\n// declares an integer first, and then assigns the value in a different step"
   },
   {
+    "chapter": "Expressions and Operators",
     "prompt": "What are the arithmetic operators in C?",
     "completion": "The different arithmetic operators in C are listed below:\n\nFor addition: +\nExample line of code : a = x + y;\n\nFor subtraction: - \nExample line of code : a = x-y; \n\nFor multiplication: * \nExample line of code : a = x*y \n\nFor division(returns the quotient): /\nExample line of code : a = x/y \n\nFor division(returns the remainder): %\nExample line of code : a = x%y \n\nWhat is the order of arithmetic operation in C?\nWe prioritize parenthesis, then multiplication/division, and then addition/subtraction. For example, given the code:\nint result = (a+b)*x + y;\n// step 1: (a+b)\n// step 2: (a+b)*y\n// step 3: (a+b)*y + x;\nThe different arithmetic operators in C are listed below:\n\nFor addition: +\nExample line of code : a = x + y;\n\nFor subtraction: - \nExample line of code : a = x-y; \n\nFor multiplication: * \nExample line of code : a = x*y \n\nFor division(returns the quotient): /\nExample line of code : a = x/y \n\nFor division(returns the remainder): %\nExample line of code : a = x%y \n\nWhat is the order of arithmetic operation in C?\nWe prioritize parenthesis, then multiplication/division, and then addition/subtraction. For example, given the code:\nint result = (a+b)*x + y;\n// step 1: (a+b)\n// step 2: (a+b)*y\n// step 3: (a+b)*y + x;"
   },
   {
+    "chapter": "Expressions and Operators",
     "prompt": "What are relational operators in C?",
     "completion": "Relational operators are used to check if a statement is valid, and usually used in a conditional statement.\na > b : used to check if a is greater than b\na >= b : used to check if a is greater than or equal to\na < b : used to check if a is smaller than b\na <= b : used to check if a is smaller than or equal to b\na == b: used to check if a is equal to b\na != b; used to check if a is not equal to b\nRelational operators are used to check if a statement is valid, and usually used in a conditional statement.\na > b : used to check if a is greater than b\na >= b : used to check if a is greater than or equal to\na < b : used to check if a is smaller than b\na <= b : used to check if a is smaller than or equal to b\na == b: used to check if a is equal to b\na != b; used to check if a is not equal to b"
   },
   {
+    "chapter": "Expressions and Operators",
     "prompt": "What are logical operators in C?",
     "completion": "Logical operators are a set of operators used to check for the validity of a statement or multiple statements in C, usually used in an if statement:\n\nLogical NOT: Checks if a variable if not equal to a value, returning true if so\nRepresented by !\nCode: if(x !); // returns true only if statement is valid\n\nLogical AND: Checks if multiple statements are all valid, returning true only if all of them are valid.\nRepresented by: &&\nCode: if(x==3 && y==2);  // returns true only if both statements valid\n\nLogical OR: Checks if any one of multiple statements is valid, returning true if so:\nRepresented by: ||\nCode: if(x==2 || y == 3 || z == 1); // returns true as long as one of the three statements are valid\nLogical operators are a set of operators used to check for the validity of a statement or multiple statements in C, usually used in an if statement:\n\nLogical NOT: Checks if a variable if not equal to a value, returning true if so\nRepresented by !\nCode: if(x !); // returns true only if statement is valid\n\nLogical AND: Checks if multiple statements are all valid, returning true only if all of them are valid.\nRepresented by: &&\nCode: if(x==3 && y==2);  // returns true only if both statements valid\n\nLogical OR: Checks if any one of multiple statements is valid, returning true if so:\nRepresented by: ||\nCode: if(x==2 || y == 3 || z == 1); // returns true as long as one of the three statements are valid"
   },
@@ -96,14 +105,17 @@
     "completion": "I/O stands for input/output statements. For ECE120, input refers to when a number or string is inputted into a program, via a keyboard, and output refers to when the program prints a string or numbers onto the screen. These can be done in both C and LC3, using different commands.\nI/O stands for input/output statements. For ECE120, input refers to when a number or string is inputted into a program, via a keyboard, and output refers to when the program prints a string or numbers onto the screen. These can be done in both C and LC3, using different commands."
   },
   {
+    "chapter": "Basic I/O",
     "prompt": "How do we use printf?",
     "completion": "There are two ways to use printf. The first is to print the contents of a single variable to the screen, in which case we can use \u201cprintf(value);\u201d , if value has already been defined in the program. \nIf we wish to print a combination of variables in the form of a particular sentence, we can use the form \u201cprintf(\u201c%d %d\u201d,var1,var2);\u201d where %d is a placeholder for var1, which we wish to insert into the string before it is printed onto the screen. The placeholder is often referred to as an escape sequence, and differs according to the type of the variable. For more information, read page 23 of Lumetta's notes.\nThere are two ways to use printf. The first is to print the contents of a single variable to the screen, in which case we can use \u201cprintf(value);\u201d , if value has already been defined in the program. \nIf we wish to print a combination of variables in the form of a particular sentence, we can use the form \u201cprintf(\u201c%d %d\u201d,var1,var2);\u201d where %d is a placeholder for var1, which we wish to insert into the string before it is printed onto the screen. The placeholder is often referred to as an escape sequence, and differs according to the type of the variable. For more information, read page 23 of Lumetta's notes."
   },
   {
+    "chapter": "Basic I/O",
     "prompt": "How do we use scanf?",
     "completion": "Scanf works very similarly to printf, the only difference being that when we enter the variable name, we need to insert an ampersand before it. For example, if we intend to read in two integers that separated by a space, we would use the statement \u201cscanf(\u201c%d %d\u201d,&num1,&num2);\u201d . For more information, read page 23 of Lumetta's notes.\nScanf works very similarly to printf, the only difference being that when we enter the variable name, we need to insert an ampersand before it. For example, if we intend to read in two integers that separated by a space, we would use the statement \u201cscanf(\u201c%d %d\u201d,&num1,&num2);\u201d . For more information, read page 23 of Lumetta's notes."
   },
   {
+    "chapter": "Basic I/O",
     "prompt": "What are the common escape sequences or placeholders we need to know for I/O functions in C?",
     "completion": "For ECE120, the important ones to know are that %c is for characters, %d for integers, %f for floats, %lf for doubles and %u for unsigned integers. Page 23 of Lumetta's notes contains a table encapsulating this information.\nFor ECE120, the important ones to know are that %c is for characters, %d for integers, %f for floats, %lf for doubles and %u for unsigned integers. Page 23 of Lumetta's notes contains a table encapsulating this information."
   },
@@ -123,6 +135,7 @@
     "completion": "A literal in terms of a logical expression refers to the Boolean variables or the complement of a Boolean variable. They are the fundamental parts of a logical expression and they are often used to construct more complex Boolean expressions through logical operators like AND, OR, and NOT.\nA literal in terms of a logical expression refers to the Boolean variables or the complement of a Boolean variable. They are the fundamental parts of a logical expression and they are often used to construct more complex Boolean expressions through logical operators like AND, OR, and NOT."
   },
   {
+    "chapter": "Terminology",
     "prompt": "What is a Sum of Products?",
     "completion": "Sum of Products (often abbreviated as SOP) is a type of Boolean function that represents a logical function as a sum of products term, where each product term is the logical AND of one or more literals. Basically, it is the sum of several terms, each of which is the product of literals.\nSum of Products (often abbreviated as SOP) is a type of Boolean function that represents a logical function as a sum of products term, where each product term is the logical AND of one or more literals. Basically, it is the sum of several terms, each of which is the product of literals."
   },
@@ -152,6 +165,7 @@
     "completion": "Parallel Loading refers to using one input line per bit (and flip-flop) to load a multi-bit register with an entirely new number in a single clock cycle. Each flip-flop is simultaneously loaded with a new bit in the same cycle, hence the term \u201cparallel\u201d loading. For more information read page 73 of Lumetta's notes.\nParallel Loading refers to using one input line per bit (and flip-flop) to load a multi-bit register with an entirely new number in a single clock cycle. Each flip-flop is simultaneously loaded with a new bit in the same cycle, hence the term \u201cparallel\u201d loading. For more information read page 73 of Lumetta's notes."
   },
   {
+    "chapter": "Registers",
     "prompt": "What is a register and why do we use them?",
     "completion": "A register is a storage element comprising multiple flip-flops that operate in the same clock cycle. A register is used for storing larger chunks of data, as a flip-flop can only store a single bit at any one time. For more details read page 73 of Lumetta's notes.\nA register is a storage element comprising multiple flip-flops that operate in the same clock cycle. A register is used for storing larger chunks of data, as a flip-flop can only store a single bit at any one time. For more details read page 73 of Lumetta's notes."
   },
@@ -174,5 +188,255 @@
     "chapter": "Tri-State Buffers and Combining Chips",
     "prompt": "What is a tri-state buffer and where is it used?",
     "completion": "The tri-state buffer serves to disconnect an electronic component from the output line when it is not being used and we do not want to read its output. It is prominent in the LC3 datapath, where we only want one device sending an output signal onto the bus. To prevent all other components from sending signals at the same time, each component is controlled by a tri-state buffer, and at most only one of the buffers is \u201cturned on\u201d at any one time.\nThe tri-state buffer serves to disconnect an electronic component from the output line when it is not being used and we do not want to read its output. It is prominent in the LC3 datapath, where we only want one device sending an output signal onto the bus. To prevent all other components from sending signals at the same time, each component is controlled by a tri-state buffer, and at most only one of the buffers is \u201cturned on\u201d at any one time."
+  },
+  {
+    "prompt": "What is an example of a Sum of Products?",
+    "chapter": "Terminology",
+    "completion": ""
+  },
+  {
+    "chapter": "Terminology",
+    "prompt": "What is a Product of Sums?",
+    "completion": ""
+  },
+  {
+    "chapter": "Veitch Charts and Karnaugh Maps",
+    "prompt": "What is an example of a Product of Sums?",
+    "completion": ""
+  },
+  {
+    "chapter": "Veitch Charts and Karnaugh Maps",
+    "prompt": "What is a Veitch chart?",
+    "completion": ""
+  },
+  {
+    "chapter": "Veitch Charts and Karnaugh Maps",
+    "prompt": "What is a Karnaugh map?",
+    "completion": ""
+  },
+  {
+    "chapter": "Canonical Forms",
+    "prompt": "Where would I use a Karnaugh map?",
+    "completion": ""
+  },
+  {
+    "chapter": "Canonical Forms",
+    "prompt": "What is the canonical form used for?",
+    "completion": ""
+  },
+  {
+    "chapter": "Canonical Forms",
+    "prompt": "What is logical equivalence?",
+    "completion": ""
+  },
+  {
+    "chapter": "Canonical Forms",
+    "prompt": "How do I check for logical equivalence between two logical expressions?",
+    "completion": ""
+  },
+  {
+    "chapter": "Two-Level Logic",
+    "prompt": "What is the difference between canonical SOP and canonical POS form?",
+    "completion": ""
+  },
+  {
+    "prompt": "How do I quickly convert from AND/OR to NAND/NAND implementation?",
+    "chapter": "Logic Properties",
+    "completion": ""
+  },
+  {
+    "chapter": "Caring about Don't Cares",
+    "prompt": "How do we benefit from using Don't Cares in Kmaps?",
+    "completion": ""
+  },
+  {
+    "chapter": "One Bit at a Time",
+    "prompt": "How can we use logical designs that are optimized for a single bit in operations on multi-bit (such as 8-bit, 16-bit, etc.) numbers?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What are some disadvantages of a design made using bit-sliced design? What are some advantages?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "How is adding binary numbers similar to adding regular base-10 numbers?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What is the carry-in bit used for in 2's complement addition?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What is a half-adder and what would I use it for?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What is a full adder and what would I use it for?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What is the difference between the half-adder and the full-adder in a logical design?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "When multiple adders are joined together in a bit-sliced design, what is the resulting adder called?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "Why do we call multiple adders joined together a ripple-carry adder?",
+    "completion": ""
+  },
+  {
+    "chapter": "Designing the Logic",
+    "prompt": "What is the disadvantage of a ripple carry adder?",
+    "completion": ""
+  },
+  {
+    "chapter": "Designing the Logic",
+    "prompt": "During the design process of each individual bit slice, what type of function do we implement?",
+    "completion": ""
+  },
+  {
+    "chapter": "Designing the Logic",
+    "prompt": "Why do we use a majority function in a bit-sliced adder?",
+    "completion": ""
+  },
+  {
+    "chapter": "Designing the Logic",
+    "prompt": "In a logical circuit, what is gate delay?",
+    "completion": ""
+  },
+  {
+    "chapter": "Adders and Word Size",
+    "prompt": "How do we calculate the total delay for a N-bit comparator?",
+    "completion": ""
+  },
+  {
+    "chapter": "Comparing Two Numbers",
+    "prompt": "What is the word size in most Instruction Set Architectures used to specify?",
+    "completion": ""
+  },
+  {
+    "chapter": "An Abstract Model",
+    "prompt": "How does the way that humans compare and machines compare numbers differ?",
+    "completion": ""
+  },
+  {
+    "chapter": "Subtraction",
+    "prompt": "How many possible results can the comparison of two numbers produce?",
+    "completion": ""
+  },
+  {
+    "chapter": "Subtraction",
+    "prompt": "How can we use an adder to calculate subtraction of two numbers?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "How does the overflow for unsigned subtraction differ from the overflow for unsigned addition?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "What is the purpose of a multiplexer?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "How can we use smaller multiplexers to build bigger multiplexers?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "What is a N-to-M multiplexer?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "What does the N in a N-to-M multiplexer refer to?",
+    "completion": ""
+  },
+  {
+    "chapter": "Registers",
+    "prompt": "What does the M in a N-to-M multiplexer refer to?",
+    "completion": ""
+  },
+  {
+    "chapter": "Serialization and Finite State Machines",
+    "prompt": "How does Serialization work without many bit slices?",
+    "completion": ""
+  },
+  {
+    "chapter": "Serialization: General Strategy",
+    "prompt": "How do I design an efficient FSM?",
+    "completion": ""
+  },
+  {
+    "chapter": "Serialization: General Strategy",
+    "prompt": "What are the benefits of doing a serial design over a bit-sliced design?",
+    "completion": ""
+  },
+  {
+    "chapter": "Ripple Counters",
+    "prompt": "When is it appropriate to make a bit-sliced design as opposed to a serial design?",
+    "completion": ""
+  },
+  {
+    "chapter": "Finite State Machine Design Examples, Part I",
+    "prompt": "What do the different numbers and names inside an FSM bubble mean?",
+    "completion": ""
+  },
+  {
+    "chapter": "Choosing a State Representation",
+    "prompt": "What does the number before the \u201c/\u201d mean in an FSM diagram?",
+    "completion": ""
+  },
+  {
+    "chapter": "Choosing a State Representation",
+    "prompt": "Can you give an example of what happens if we choose a bad state representation for a given FSM?",
+    "completion": ""
+  },
+  {
+    "chapter": "Memory",
+    "prompt": "How do we decide how to number different states in an FSM?",
+    "completion": ""
+  },
+  {
+    "chapter": "Control Unit Design",
+    "prompt": "How do i identify the different states in my FSM to be the stages in the von neumann model",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "What does the BUS do and how is it different from the other datapaths? Why is it bolded?",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "What are the different types of Data path signals in LC3?",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "What restrictions are there in the LC3 data path signals? Which datapath signals can and cannot be turned on together?",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "How are the different ADD opcodes executed in the LC3 microarchitecture? How does the LC3 know when to add from two registers and when to add an immediate value to a register, based on opcode alone?",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "How do we do error detection in integrated circuit design? ",
+    "completion": ""
   }
 ]
