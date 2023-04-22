@@ -1,0 +1,513 @@
+# FORMAT is like this: 
+#<CHAPTER>
+#<QUESTION>
+#<ANSWER>
+#</ANSWER>
+# ---  <possibly repeat>  --
+#<CHAPTER>
+#...
+#Todo: Escape quotes
+
+<CHAPTER>
+1.1 The Halting Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+<QUESTION>
+What is the Halting Problem?
+<ANSWER>
+The halting problem is a classic problem in computer science that asks whether it is possible to determine, in a general and systematic way, whether a given computer program will eventually halt (terminate) or run forever. Fundamentally it's impossible to know if any give piece of code will get stuck in an infinite loop. 
+
+The problem was first introduced by Alan Turing in the 1930s as part of his work on the foundations of computer science and theoretical computation. Turing proved that there is no algorithmic solution to the halting problem that can work for all possible computer programs.
+
+The halting problem tells us that there is no general algorithm that can solve this problem for all possible values of x. 
+
+Here's example code to demonstrate undecidability:
+1: read x from input
+2: while x is even:
+3:     x = x / 2
+4: if x == 1:
+5:     print "halted"
+6: else:
+7:     print "did not halt"
+
+In industry, it highlights the difficulty of reasoning about the behavior of complex software systems, and the potential for bugs and unexpected behavior due to the inherent unpredictability of certain program constructs.
+
+Are there work arounds to avoid the Halting Problem? 
+Of course, for particular domains, you can make assumptions that allow tools to notice some, but not all, halting problems.
+
+One such technique is to use program analysis tools that can perform static analysis of the code to detect potential infinite loops or other sources of non-termination. 
+
+Another approach is to use heuristics or statistical methods to estimate the likelihood of termination based on patterns in the program's behavior or in the values of its variables. For example, if a program appears to be making progress towards a specific goal or if its variables are converging towards certain values, it may be more likely to terminate than if it is stuck in a loop or its variables are oscillating wildly.
+
+However, few to zero techniques are foolproof, especially as assumptions break down in complex systems.
+</ANSWER>
+<CHAPTER>
+1.2 The 2's Complement Representation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+<QUESTION>
+Explain the 2's Complement Representation
+<ANSWER>
+The 2's complement representation is a way of representing both positive and negative integers using binary digits (bits). In this system, the most significant bit (the leftmost bit) is used as a sign bit, where 0 represents a positive number and 1 represents a negative number.
+
+To obtain the 2's complement representation of a negative integer, we take the binary representation of the positive integer that corresponds to its absolute value, then invert (flip) all of its bits, and finally add 1 to the result. For example, to find the 2's complement of -3 using 4 bits, we take the binary representation of 3, which is 0011, invert all of its bits to get 1100, and add 1 to obtain 1101, which is the 2's complement representation of -3.
+
+According to Steven Lumetta, to master these topics you should be able to represent decimal numbers with unsigned, 2's complement, and IEEE floating-point representations, and be able to calculate the decimal value represented by a bit pattern in any of these representations.
+
+One important property of the 2's complement representation is that the range of representable integers is asymmetric. In an n-bit representation, the largest representable positive integer is 2^(n-1) - 1, while the largest representable negative integer is -2^(n-1). This means that the negative range includes one more integer than the positive range, because 0 is considered positive in this system. This property can cause issues when performing arithmetic with integers near the edges of the representable range.
+
+It's always important to consider “overflow” when representing numbers, so be sure to handle overflow when using these numbers. 
+
+To practice these topics, Lumetta suggests writing Boolean expressions for the overflow conditions on both unsigned and 2's complement addition. Also, you should understand the tradeoffs between integer and floating-point representations for numbers.
+</ANSWER>
+<QUESTION>
+What are Boolean expressions? 
+<ANSWER>
+In computer science, Boolean expressions are used to express logical conditions in programming languages, such as "if" statements, "while" loops, and "for" loops. These expressions typically use logical operators, such as AND, OR, and NOT, to combine one or more Boolean values or expressions.
+
+For example, a simple Boolean expression might be "5 > 3", which evaluates to true, since 5 is indeed greater than 3. Another example might be "x < 10 AND y > 20", which evaluates to true if x is less than 10 and y is greater than 20. A third example might be "NOT (a OR b)", which evaluates to true if neither a nor b is true.
+
+Boolean expressions are an essential tool for programming, as they allow programmers to write code that can make decisions and take different actions based on different conditions.
+
+According to Steven Lumetta, to master these topics you should be able to:
+1. Be able to write a truth table for a Boolean expression.
+2. Be able to write a Boolean expression as a sum of minterms.
+3. Write Boolean expressions for the overflow conditions on both unsigned and 2's complement addition.
+</ANSWER>
+<QUESTION>
+Why are Boolean expressions useful?
+<ANSWER>
+Boolean expressions are an essential tool for programming, as they allow programmers to write code that can make decisions and take different actions based on different conditions.
+
+1. Control flow
+2. Checking program correctness, such as with assert statements.
+3. Data validation
+4. Optimization, by reducing the number of operations required if a condition is met.
+
+In summary, Boolean expressions are useful in computer science because they provide a versatile and powerful way to represent logical conditions, which are essential for control flow, program correctness, data validation, testing, and optimization.
+</ANSWER>
+<CHAPTER>
+1.2.4 Deriving 2's Complement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+<QUESTION>
+How do you convert a given decimal number into its 2's complement representation:
+<ANSWER>
+Take the decimal number and write out the bit representation as you would for any decimal. If the original decimal given is positive, this is all you need to do.
+If the given decimal number is negative, flip all the bits such that 1s become 0s and 0s become 1s. Subsequently, add 1 to this bit sequence to obtain the final 2s complement representation.
+</ANSWER>
+<CHAPTER>
+1.3.2 Overflow for Unsigned Addition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+<QUESTION>
+When does an overflow occur for unsigned addition
+<ANSWER>
+Determining overflow for unsigned addition is a relatively straightforward process. After adding together two bit strings, if we observe that there is a carryout beyond the most significant bit, we say there is an overflow.
+</ANSWER>
+<CHAPTER>
+1.3.3 Overflow for 2's Complement Addition . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+<QUESTION>
+When does an overflow occur for 2's complement addition
+<ANSWER>
+If adding together all positive or all negative bit strings, we know the output should be the same sign as the inputs. The fastest way to tell for an overflow is by comparing the MSB. If multiple positive bit strings  (represented by MSB = 0) or multiple negative bit strings are added (MSB = 1), and the resulting output produces the opposite MSB, we can tell there is an overflow.
+For inputs which are not strictly all positive or all strictly negative, we can tell if there is an overflow by adding two of the terms together and seeing if there is an overflow, and repeating.
+</ANSWER>
+<CHAPTER>
+1.4 Logic Operations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+<QUESTION>
+What does the logical “AND” do?
+<ANSWER>
+The logical “AND” compares N bits. If all N bits are a 1, the output is a 1. For any other case, the output is a 0. 
+</ANSWER>
+<QUESTION>
+What does the logical “OR” do?
+<ANSWER>
+The logical “OR” compares N bits. If there is at least a 1 appearing once or multiple times, the output is a 1. Else, the output is a 0.
+</ANSWER>
+<QUESTION>
+What does the logical “NOT” do?
+<ANSWER>
+The logical “NOT” operator flips the bits, such that a 1 becomes a 0 and a 0 becomes a 1
+</ANSWER>
+<QUESTION>
+What does the logical “XOR” do?
+<ANSWER>
+The logical “XOR” compares N bits, and produces output 1 if there are an odd number of 1s, and produces a 0 if there are an even number of 1s or none at all.
+</ANSWER>
+<CHAPTER>
+1.4.1 Truth Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+<QUESTION>
+How to create a truth table?
+<ANSWER>
+Step 1: Determine the number of input variables, assigning them variables such as x,y,z etc
+Step 2: Create possible input combinations. For example, if we have two input variables there are 4 combinations, if we have 3 input variables there are 8 combinations. Generally, there are 2^n input combinations possible for n input variables
+Step 3: Use the given logic equation in the question, to determine the output(s) for each of the input combinations, filling them in the truth table.
+</ANSWER>
+<CHAPTER>
+1.4.4 Logical Completeness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+<QUESTION>
+What does logical completeness mean?
+<ANSWER>
+In layman terms, logical completeness means being able to express any form of logical expression using the given terms. For the purposes of ECE120, the set {AND,NOT,OR} is logically complete - meaning you can express any boolean logical expression in terms of just these three functions. {NAND} and {NOR} are also logically complete sets, which can be proved by using each set to construct AND, NOT and NOR separately.
+</ANSWER>
+<CHAPTER>
+1.5.2 Data Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+<QUESTION>
+What are the various variable types in C?
+<ANSWER>
+C supports four basic data types: integers, characters, floating point numbers, and boolean values. Variables of these types can be created with the type specifiers int, char, float (or double), and _Bool (or bool)
+Int: data value represents an integer
+Char: data value represents a character
+float/double: data value represents a single/double precision float number
+Bool: data with either 1 to represent true, and 0 to represent false (not relevant to ECE 120)
+</ANSWER>
+<CHAPTER>
+1.5.3 Variable Declarations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+<QUESTION>
+How do you declare a variable in C
+<ANSWER>
+To declare a variable, use the following syntax by declaring the variable type before assigning a value to it if needed. Examples are listed below for different data type.
+int x = 3;        // assigns a value 3 to the integer data type variable x
+char lock;    // creates a char data type lock without assigning a value to it yet
+char key = 'Q';    //creates a char data type key and assigns the character “Q” to it
+float a;      // creates a single precision floating number data type variable a
+double b;     // creates a double precision floating number data type variable a
+</ANSWER>
+<QUESTION>
+When to declare a variable in C?
+<ANSWER>
+Any variable that needs to be used in a block of code or a function in C needs to be declared before it is used. This includes variables used to store values, temporary variables such as counters, and variables that might be used for printing. 
+</ANSWER>
+<CHAPTER>
+1.5.4 Expressions and Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+<QUESTION>
+What is the assignment operator?
+<ANSWER>
+The assignment operator is used when we want to assign a value into a variable, such that the variable holds that value and we can call back on it in other statements whenever we want. We use a SINGLE equal to sign for this. For example, I want to assign the number 5 to the variable temp_counter:
+
+int temp_counter = 5;  // assigns 5 to a declared integer straightaway OR
+int temp_counter; 
+Temp_counter = 5;
+// declares an integer first, and then assigns the value in a different step
+</ANSWER>
+<QUESTION>
+What are the arithmetic operators in C?
+<ANSWER>
+The different arithmetic operators in C are listed below:
+
+For addition: +
+Example line of code : a = x + y;
+
+For subtraction: - 
+Example line of code : a = x-y; 
+
+For multiplication: * 
+Example line of code : a = x*y 
+
+For division(returns the quotient): /
+Example line of code : a = x/y 
+
+For division(returns the remainder): %
+Example line of code : a = x%y 
+
+What is the order of arithmetic operation in C?
+We prioritize parenthesis, then multiplication/division, and then addition/subtraction. For example, given the code:
+int result = (a+b)*x + y;
+// step 1: (a+b)
+// step 2: (a+b)*y
+// step 3: (a+b)*y + x;
+</ANSWER>
+<QUESTION>
+What are relational operators in C?
+<ANSWER>
+Relational operators are used to check if a statement is valid, and usually used in a conditional statement.
+a > b : used to check if a is greater than b
+a >= b : used to check if a is greater than or equal to
+a < b : used to check if a is smaller than b
+a <= b : used to check if a is smaller than or equal to b
+a == b: used to check if a is equal to b
+a != b; used to check if a is not equal to b
+</ANSWER>
+<QUESTION>
+What are logical operators in C?
+<ANSWER>
+Logical operators are a set of operators used to check for the validity of a statement or multiple statements in C, usually used in an if statement:
+
+Logical NOT: Checks if a variable if not equal to a value, returning true if so
+Represented by !
+Code: if(x !); // returns true only if statement is valid
+
+Logical AND: Checks if multiple statements are all valid, returning true only if all of them are valid.
+Represented by: &&
+Code: if(x==3 && y==2);  // returns true only if both statements valid
+
+Logical OR: Checks if any one of multiple statements is valid, returning true if so:
+Represented by: ||
+Code: if(x==2 || y == 3 || z == 1); // returns true as long as one of the three statements are valid
+</ANSWER>
+<CHAPTER>
+1.5.5 Basic I/O . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+<QUESTION>
+What are I/O statements?
+<ANSWER>
+I/O stands for input/output statements. For ECE120, input refers to when a number or string is inputted into a program, via a keyboard, and output refers to when the program prints a string or numbers onto the screen. These can be done in both C and LC3, using different commands.
+</ANSWER>
+<QUESTION>
+How do we use printf?
+<ANSWER>
+There are two ways to use printf. The first is to print the contents of a single variable to the screen, in which case we can use “printf(value);” , if value has already been defined in the program. 
+If we wish to print a combination of variables in the form of a particular sentence, we can use the form “printf(“%d %d”,var1,var2);” where %d is a placeholder for var1, which we wish to insert into the string before it is printed onto the screen. The placeholder is often referred to as an escape sequence, and differs according to the type of the variable. For more information, read page 23 of Lumetta's notes.
+</ANSWER>
+<QUESTION>
+How do we use scanf?
+<ANSWER>
+Scanf works very similarly to printf, the only difference being that when we enter the variable name, we need to insert an ampersand before it. For example, if we intend to read in two integers that separated by a space, we would use the statement “scanf(“%d %d”,&num1,&num2);” . For more information, read page 23 of Lumetta's notes.
+</ANSWER>
+<QUESTION>
+What are the common escape sequences or placeholders we need to know for I/O functions in C?
+<ANSWER>
+For ECE120, the important ones to know are that %c is for characters, %d for integers, %f for floats, %lf for doubles and %u for unsigned integers. Page 23 of Lumetta's notes contains a table encapsulating this information.
+</ANSWER>
+<CHAPTER>
+1.5.6 Types of Statements in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+<QUESTION>
+What types of statements are there in C?
+<ANSWER>
+For the purposes of ECE120, there are three types of statements - sequential, conditional and iterative. Sequential steps refer to steps performed one after another, like a numbered set of instructions. In ECE120 this will mostly refer to printf() and scanf() functions.
+
+Conditional steps refer to when a program branches into two paths, and the path taken depends on whether a condition is satisfied or not. This is represented by “if-else” statements in C.
+
+Iterative steps refer to a certain step being repeated for a fixed number of times, or until a certain condition is satisfied. This is represented by a “for-loop” block in C.
+</ANSWER>
+<CHAPTER>
+2.1.1 Defining Optimality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+<QUESTION>
+What is an optimal expression and why would I use it over the original expression?
+<ANSWER>
+If you were to make truth tables for an optimized expression and the original expression, you would see that they are the same. An optimized expression is a simplified version of the original logic expression. Functionally, it is identical to the original logic expression, but it requires fewer logic gates/operations to implement since it has less terms.
+</ANSWER>
+<CHAPTER>
+2.1.2 Terminology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+<QUESTION>
+What is a literal?
+<ANSWER>
+A literal in terms of a logical expression refers to the Boolean variables or the complement of a Boolean variable. They are the fundamental parts of a logical expression and they are often used to construct more complex Boolean expressions through logical operators like AND, OR, and NOT.
+</ANSWER>
+<QUESTION>
+What is a Sum of Products?
+<ANSWER>
+Sum of Products (often abbreviated as SOP) is a type of Boolean function that represents a logical function as a sum of products term, where each product term is the logical AND of one or more literals. Basically, it is the sum of several terms, each of which is the product of literals.
+</ANSWER>
+<QUESTION>
+What is an example of a Sum of Products?
+<QUESTION>
+What is a Product of Sums?
+<QUESTION>
+What is an example of a Product of Sums?
+<CHAPTER>
+2.1.3 Veitch Charts and Karnaugh Maps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+<QUESTION>
+What is a Veitch chart?
+Where would I use a Veitch chart?
+<QUESTION>
+What is a Karnaugh map?
+<QUESTION>
+Where would I use a Karnaugh map?
+<CHAPTER>
+2.1.4 Canonical Forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+<QUESTION>
+What is the canonical form used for?
+<QUESTION>
+What is logical equivalence?
+<QUESTION>
+How do I check for logical equivalence between two logical expressions?
+<QUESTION>
+What is the difference between canonical SOP and canonical POS form?
+<CHAPTER>
+2.1.5 Two-Level Logic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+<QUESTION>
+How do I easily convert from POS to SOP form and vice versa?
+<ANSWER>
+The quickest way to convert from POS to SOP is to use DeMorgans law twice. 
+Given the expression F = xy' + yz' in SOP form, we first take DeMorgans law to get F'
+F' = (xy' + yz')'
+   = (xy')'(yz')'
+   = (x'+y)(y'+z)
+   = x'y' + x'z + yy' + yz
+   = x'y' + x'z + yz
+We then take DeMorgan's law again
+F'' = (x'y'+x'z+yz)'
+     =(x'y')'(x'z)'(yz)'
+     =(x+y)(x+z')(y'+z')
+     =(x+y)(y'+z')
+     = F (POS form)
+</ANSWER>
+<QUESTION>
+How do I quickly convert from AND/OR to NAND/NAND implementation?
+<CHAPTER>
+2.2.1 Logic Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+<QUESTION>
+What is a Dual Form and what function do they serve?
+<ANSWER>
+Every boolean expression has its own dual form. To derive the dual form of a boolean expression, replace all the 1s with 0s in the expression, all the 0s with 1s, all the ANDs with ORs, and ORs with ANDs. The variables themselves remain unchanged. The dual of a dual expression simply returns the original expression. Dual forms are used for CMOS gate designs, where the NMOS gate logic will be the dual of the PMOS gate logic. More information can be found on page 44 of Lumetta's notes.
+</ANSWER>
+<CHAPTER>
+2.2.2 Choosing the Best Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+<QUESTION>
+How do we benefit from using Don't Cares in Kmaps?
+<CHAPTER>
+2.2.3 Caring about Don't Cares . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+<QUESTION>
+What are the dangers of using don't cares in our next state design implementation, for real world systems?
+<ANSWER>
+If our machine falls into an unexpected state (when restarting/initializing the machine, for example), it could end up behaving unexpectedly and failing. Page 46 of Lumetta's notes gives an example for such a situation. Using don't cares for the ice cream vending machine FSM simplifies the logic circuit, but it does not account for cases such as when multiple buttons are pressed at the same time, in which case causing the cup to overflow. 
+</ANSWER>
+<CHAPTER>
+2.3 Example: Bit-Sliced Addition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+<QUESTION>
+What is the difference between a half adder and a full adder?
+<ANSWER>
+A half adder only has two input bits while a full adder has 3 input bits. A full adder is especially useful for bit-sliced addition of two numbers, as you can use a bit for each number followed by another bit for the carry over sum from the previous iteration (similar to how we carry over one when adding numbers by hand and one column produces a sum greater than 10). Both the half adder and the full adder have two output bits each, one is the sum output and the other is the carry output.
+</ANSWER>
+<CHAPTER>
+2.3.1 One Bit at a Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+<QUESTION>
+How can we use logical designs that are optimized for a single bit in operations on multi-bit (such as 8-bit, 16-bit, etc.) numbers?
+<QUESTION>
+What are some disadvantages of a design made using bit-sliced design? What are some advantages?
+<CHAPTER>
+2.3.2 Abstracting the Human Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+<QUESTION>
+How is adding binary numbers similar to adding regular base-10 numbers?
+<QUESTION>
+What is the carry-in bit used for in 2's complement addition?
+<QUESTION>
+What is a half-adder and what would I use it for?
+<QUESTION>
+What is a full adder and what would I use it for?
+<QUESTION>
+What is the difference between the half-adder and the full-adder in a logical design?
+<QUESTION>
+When multiple adders are joined together in a bit-sliced design, what is the resulting adder called?
+<QUESTION>
+Why do we call multiple adders joined together a ripple-carry adder?
+<QUESTION>
+What is the disadvantage of a ripple carry adder?
+<CHAPTER>
+2.3.3 Designing the Logic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+<QUESTION>
+During the design process of each individual bit slice, what type of function do we implement?
+<QUESTION>
+Why do we use a majority function in a bit-sliced adder?
+<QUESTION>
+In a logical circuit, what is gate delay?
+<QUESTION>
+How do we calculate the total delay for a N-bit comparator?
+<CHAPTER>
+2.3.4 Adders and Word Size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+<QUESTION>
+What is the word size in most Instruction Set Architectures used to specify?
+<CHAPTER>
+2.4.1 Comparing Two Numbers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+<QUESTION>
+How does the way that humans compare and machines compare numbers differ?
+<CHAPTER>
+2.4.2 An Abstract Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+<QUESTION>
+How many possible results can the comparison of two numbers produce?
+<CHAPTER>
+2.5.1 Subtraction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+<QUESTION>
+How can we use an adder to calculate subtraction of two numbers?
+<QUESTION>
+How does the overflow for unsigned subtraction differ from the overflow for unsigned addition?
+<CHAPTER>
+2.5.4 The Multiplexer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+<QUESTION>
+What is the purpose of a multiplexer?
+<QUESTION>
+How can we use smaller multiplexers to build bigger multiplexers?
+<QUESTION>
+What is a N-to-M multiplexer?
+<QUESTION>
+What does the N in a N-to-M multiplexer refer to?
+<QUESTION>
+What does the M in a N-to-M multiplexer refer to?
+<CHAPTER>
+2.7.1 Registers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+<QUESTION>
+What is parallel loading?
+<ANSWER>
+Parallel Loading refers to using one input line per bit (and flip-flop) to load a multi-bit register with an entirely new number in a single clock cycle. Each flip-flop is simultaneously loaded with a new bit in the same cycle, hence the term “parallel” loading. For more information read page 73 of Lumetta's notes.
+</ANSWER>
+<QUESTION>
+What is a register and why do we use them?
+<ANSWER>
+A register is a storage element comprising multiple flip-flops that operate in the same clock cycle. A register is used for storing larger chunks of data, as a flip-flop can only store a single bit at any one time. For more details read page 73 of Lumetta's notes.
+</ANSWER>
+<CHAPTER>
+2.7.2 Shift Registers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+<QUESTION>
+What is the difference between arithmetic and logical right shift?
+<ANSWER>
+Logical right shift treats the bits as an unsigned number, and all the bits shift right by one number while 0 is stored in the most significant bit. Arithmetic right shift treats the bits as a signed number in two's complement, and all the bits shift right by one number while the most significant bit remains the same as what it was before. Both right shift operations are analogous to dividing the number by two. More information can be found on page 75 of Lumetta's notes.
+</ANSWER>
+<CHAPTER>
+3.1 Serialization and Finite State Machines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+<QUESTION>
+How does Serialization work without many bit slices?
+<QUESTION>
+How do I design an efficient FSM?
+<CHAPTER>
+3.1.1 Serialization: General Strategy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+<QUESTION>
+What are the benefits of doing a serial design over a bit-sliced design?
+<QUESTION>
+When is it appropriate to make a bit-sliced design as opposed to a serial design?
+<CHAPTER>
+3.1.5 Ripple Counters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+<QUESTION>
+What are the benefits and drawbacks of using ripple counters over synchronous counters?
+<ANSWER>
+Ripple counters consume less energy than synchronous counters, and are more appropriate for devices with limited energy supplies. However, there is a delay inherent to the structure of ripple counters, and ensuring the timing delay does not make such a design unreliable is a significant drawback.
+</ANSWER>
+<CHAPTER>
+3.2 Finite State Machine Design Examples, Part I . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+<QUESTION>
+What do the different numbers and names inside an FSM bubble mean?
+<QUESTION>
+What does the number before the “/” mean in an FSM diagram?
+<CHAPTER>
+3.2.9 Choosing a State Representation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+<QUESTION>
+Can you give an example of what happens if we choose a bad state representation for a given FSM?
+<QUESTION>
+How do we decide how to number different states in an FSM?
+<CHAPTER>
+3.6.1 Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+<QUESTION>
+How can we connect smaller chips (smaller address space and/or addressability) to form larger and more powerful RAMS?
+<ANSWER>
+This can be achieved by splitting the data lines and address lines that are meant for a larger RAM, into smaller lines that can go into smaller chips.
+For example, if we want to build a 64Kx16 RAM from two 64Kx8 chips, we just need to split the 16 bit data line intended for the bigger RAM into two - one for each 64Kx8 chip. Typically, bits 0-7 from the dataline will go into one chip while bits 8-15 go into the other chip. The rest of the connections will be identical for both smaller chips.
+</ANSWER>
+<CHAPTER>
+3.6.3 Tri-State Buffers and Combining Chips . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+<QUESTION>
+What is a tri-state buffer and where is it used?
+<ANSWER>
+The tri-state buffer serves to disconnect an electronic component from the output line when it is not being used and we do not want to read its output. It is prominent in the LC3 datapath, where we only want one device sending an output signal onto the bus. To prevent all other components from sending signals at the same time, each component is controlled by a tri-state buffer, and at most only one of the buffers is “turned on” at any one time.
+</ANSWER>
+<CHAPTER>
+3.7 From FSM to Computer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 125
+<QUESTION>
+How do i identify the different states in my FSM to be the stages in the von neumann model
+<CHAPTER>
+4.1 Control Unit Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+<QUESTION>
+What does the BUS do and how is it different from the other datapaths? Why is it bolded?
+<CHAPTER>
+4.1.1 LC-3 Datapath Control Signals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+<QUESTION>
+What are the different types of Data path signals in LC3?
+<QUESTION>
+What restrictions are there in the LC3 data path signals? Which datapath signals can and cannot be turned on together?
+<QUESTION>
+How are the different ADD opcodes executed in the LC3 microarchitecture? How does the LC3 know when to add from two registers and when to add an immediate value to a register, based on opcode alone?
+<QUESTION>
+How do we do error detection in integrated circuit design? 
+<QUESTION>
+What is error correction in ECE?

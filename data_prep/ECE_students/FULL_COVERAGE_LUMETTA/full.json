@@ -1,0 +1,102 @@
+[
+  {
+    "C": "The Halting Problem",
+    "Q": "What is the Halting Problem?",
+    "A": """The halting problem is a classic problem in computer science that asks whether it is possible to determine, in a general and systematic way, whether a given computer program will eventually halt (terminate) or run forever. Fundamentally it's impossible to know if any give piece of code will get stuck in an infinite loop. 
+
+The problem was first introduced by Alan Turing in the 1930s as part of his work on the foundations of computer science and theoretical computation. Turing proved that there is no algorithmic solution to the halting problem that can work for all possible computer programs.
+
+The halting problem tells us that there is no general algorithm that can solve this problem for all possible values of x. 
+
+Here's example code to demonstrate undecidability: 1: read x from input
+2: while x is even: 3:     x = x / 2
+4: if x == 1: 5:     print "halted"6: else: 7:     print "did not halt"
+
+In industry, it highlights the difficulty of reasoning about the behavior of complex software systems, and the potential for bugs and unexpected behavior due to the inherent unpredictability of certain program constructs.
+
+Are there work arounds to avoid the Halting Problem? 
+Of course, for particular domains, you can make assumptions that allow tools to notice some, but not all, halting problems.
+
+One such technique is to use program analysis tools that can perform static analysis of the code to detect potential infinite loops or other sources of non-termination. 
+
+Another approach is to use heuristics or statistical methods to estimate the likelihood of termination based on patterns in the program's behavior or in the values of its variables. For example, if a program appears to be making progress towards a specific goal or if its variables are converging towards certain values, it may be more likely to terminate than if it is stuck in a loop or its variables are oscillating wildly.
+
+However, few to zero techniques are foolproof, especially as assumptions break down in complex systems.
+"""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+  {
+    "C": "",
+    "Q": "",
+    "A": ""
+  },
+]

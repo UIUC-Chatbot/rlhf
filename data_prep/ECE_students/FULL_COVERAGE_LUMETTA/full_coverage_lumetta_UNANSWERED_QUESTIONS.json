@@ -1,0 +1,252 @@
+[
+  {
+    "prompt": "What is an example of a Sum of Products?",
+    "chapter": "Terminology",
+    "completion": ""
+  },
+  {
+    "chapter": "Terminology",
+    "prompt": "What is a Product of Sums?",
+    "completion": ""
+  },
+  {
+    "chapter": "Veitch Charts and Karnaugh Maps",
+    "prompt": "What is an example of a Product of Sums?",
+    "completion": ""
+  },
+  {
+    "chapter": "Veitch Charts and Karnaugh Maps",
+    "prompt": "What is a Veitch chart?",
+    "completion": ""
+  },
+  {
+    "chapter": "Veitch Charts and Karnaugh Maps",
+    "prompt": "What is a Karnaugh map?",
+    "completion": ""
+  },
+  {
+    "chapter": "Canonical Forms",
+    "prompt": "Where would I use a Karnaugh map?",
+    "completion": ""
+  },
+  {
+    "chapter": "Canonical Forms",
+    "prompt": "What is the canonical form used for?",
+    "completion": ""
+  },
+  {
+    "chapter": "Canonical Forms",
+    "prompt": "What is logical equivalence?",
+    "completion": ""
+  },
+  {
+    "chapter": "Canonical Forms",
+    "prompt": "How do I check for logical equivalence between two logical expressions?",
+    "completion": ""
+  },
+  {
+    "chapter": "Two-Level Logic",
+    "prompt": "What is the difference between canonical SOP and canonical POS form?",
+    "completion": ""
+  },
+  {
+    "prompt": "How do I quickly convert from AND/OR to NAND/NAND implementation?",
+    "chapter": "Logic Properties",
+    "completion": ""
+  },
+  {
+    "chapter": "Caring about Don't Cares",
+    "prompt": "How do we benefit from using Don't Cares in Kmaps?",
+    "completion": ""
+  },
+  {
+    "chapter": "One Bit at a Time",
+    "prompt": "How can we use logical designs that are optimized for a single bit in operations on multi-bit (such as 8-bit, 16-bit, etc.) numbers?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What are some disadvantages of a design made using bit-sliced design? What are some advantages?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "How is adding binary numbers similar to adding regular base-10 numbers?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What is the carry-in bit used for in 2's complement addition?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What is a half-adder and what would I use it for?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What is a full adder and what would I use it for?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "What is the difference between the half-adder and the full-adder in a logical design?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "When multiple adders are joined together in a bit-sliced design, what is the resulting adder called?",
+    "completion": ""
+  },
+  {
+    "chapter": "Abstracting the Human Process",
+    "prompt": "Why do we call multiple adders joined together a ripple-carry adder?",
+    "completion": ""
+  },
+  {
+    "chapter": "Designing the Logic",
+    "prompt": "What is the disadvantage of a ripple carry adder?",
+    "completion": ""
+  },
+  {
+    "chapter": "Designing the Logic",
+    "prompt": "During the design process of each individual bit slice, what type of function do we implement?",
+    "completion": ""
+  },
+  {
+    "chapter": "Designing the Logic",
+    "prompt": "Why do we use a majority function in a bit-sliced adder?",
+    "completion": ""
+  },
+  {
+    "chapter": "Designing the Logic",
+    "prompt": "In a logical circuit, what is gate delay?",
+    "completion": ""
+  },
+  {
+    "chapter": "Adders and Word Size",
+    "prompt": "How do we calculate the total delay for a N-bit comparator?",
+    "completion": ""
+  },
+  {
+    "chapter": "Comparing Two Numbers",
+    "prompt": "What is the word size in most Instruction Set Architectures used to specify?",
+    "completion": ""
+  },
+  {
+    "chapter": "An Abstract Model",
+    "prompt": "How does the way that humans compare and machines compare numbers differ?",
+    "completion": ""
+  },
+  {
+    "chapter": "Subtraction",
+    "prompt": "How many possible results can the comparison of two numbers produce?",
+    "completion": ""
+  },
+  {
+    "chapter": "Subtraction",
+    "prompt": "How can we use an adder to calculate subtraction of two numbers?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "How does the overflow for unsigned subtraction differ from the overflow for unsigned addition?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "What is the purpose of a multiplexer?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "How can we use smaller multiplexers to build bigger multiplexers?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "What is a N-to-M multiplexer?",
+    "completion": ""
+  },
+  {
+    "chapter": "The Multiplexer",
+    "prompt": "What does the N in a N-to-M multiplexer refer to?",
+    "completion": ""
+  },
+  {
+    "chapter": "Registers",
+    "prompt": "What does the M in a N-to-M multiplexer refer to?",
+    "completion": ""
+  },
+  {
+    "chapter": "Serialization and Finite State Machines",
+    "prompt": "How does Serialization work without many bit slices?",
+    "completion": ""
+  },
+  {
+    "chapter": "Serialization: General Strategy",
+    "prompt": "How do I design an efficient FSM?",
+    "completion": ""
+  },
+  {
+    "chapter": "Serialization: General Strategy",
+    "prompt": "What are the benefits of doing a serial design over a bit-sliced design?",
+    "completion": ""
+  },
+  {
+    "chapter": "Ripple Counters",
+    "prompt": "When is it appropriate to make a bit-sliced design as opposed to a serial design?",
+    "completion": ""
+  },
+  {
+    "chapter": "Finite State Machine Design Examples, Part I",
+    "prompt": "What do the different numbers and names inside an FSM bubble mean?",
+    "completion": ""
+  },
+  {
+    "chapter": "Choosing a State Representation",
+    "prompt": "What does the number before the \u201c/\u201d mean in an FSM diagram?",
+    "completion": ""
+  },
+  {
+    "chapter": "Choosing a State Representation",
+    "prompt": "Can you give an example of what happens if we choose a bad state representation for a given FSM?",
+    "completion": ""
+  },
+  {
+    "chapter": "Memory",
+    "prompt": "How do we decide how to number different states in an FSM?",
+    "completion": ""
+  },
+  {
+    "chapter": "Control Unit Design",
+    "prompt": "How do i identify the different states in my FSM to be the stages in the von neumann model",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "What does the BUS do and how is it different from the other datapaths? Why is it bolded?",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "What are the different types of Data path signals in LC3?",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "What restrictions are there in the LC3 data path signals? Which datapath signals can and cannot be turned on together?",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "How are the different ADD opcodes executed in the LC3 microarchitecture? How does the LC3 know when to add from two registers and when to add an immediate value to a register, based on opcode alone?",
+    "completion": ""
+  },
+  {
+    "chapter": "LC-3 Datapath Control Signals",
+    "prompt": "How do we do error detection in integrated circuit design? ",
+    "completion": ""
+  }
+]
